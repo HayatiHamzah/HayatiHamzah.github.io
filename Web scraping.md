@@ -3,7 +3,7 @@ layout: post
 title:  "Web scraping and NLP"
 date:   2018-02-4
 excerpt: "By scraping job postings from multiple job aggregators websites, this project is able understand the Singapore job market with Natural Language Processing (NLP)"
-image: "/images/scrape.jpg"
+image: "/images/scrap.jpg"
 permalink: /Project 3/
 ---
 
