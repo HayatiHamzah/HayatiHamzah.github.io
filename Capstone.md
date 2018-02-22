@@ -4,6 +4,7 @@ title:  "Handbag Brand detection via Image Classification using Deep Neural Netw
 date:   2018-03-02
 excerpt: "This project focused on exploratory data analysis based on SAT scores and drug use dataset. Exploratory Data Analysis also known as 'EDA' which is vital to the data science pipeline."
 image: "/images/bag1.jpg"
+permalink: /Capstone/
 ---
 
 ## tl;dr
