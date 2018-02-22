@@ -22,16 +22,51 @@ After considering different components of a data product by online retail store,
 <blockquote>  Machine learning  </blockquote>
 
 ## Dataset
-The revenue potential of 
+The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
+
+<h3>Unordered</h3>
+<ul>
+  <li>Celine</li>
+  <li>Chanel</li>
+  <li>Givenchy</li>
+  <li>Gucci</li>
+  <li>Hermes</li>
+</ul>
+
 ## Stage 0:Scraping Images
 <h2>Preformatted</h2>
-<pre><code>i = 0;
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-print 'It took ' + i + ' iterations to sort the deck.';
+<pre><code>
+
+bags=pd.read_csv("./bag.csv")
+handbagnames=bags.values.T.tolist()[0]
+typeofbags=bags.values.T.tolist()[1]
+url=[]
+
+for handbag in handbagnames:
+    url += ["https://www.google.com/search?q=handbag%20purse%20"+handbag+"&source=lnms&tbm=isch"]
+    
+driver = webdriver.Chrome(executable_path="/Users/hayatibintehamzah/Documents/GitHub/DSIstuff/Capstone/chromedriver")
+
+driver.get(url[4])
+WebDriverWait(driver, timeout=100)
+time.sleep(20)
+page_source = driver.page_source
+page_source = page_source[page_source.find("Search Results"):]
+soup = BeautifulSoup(page_source, "html.parser")
+images = [a.get('src') for a in soup.find_all("img")]
+skipped_imgs=0
+item = 0
+for img in images:
+'''    if not os.path.exists("%s" %(img)):'''    
+print("adding %s to folder" %(img))
+    try:
+        with urllib.request.urlopen(img) as response, open("handbag_crossbody_%s_img_%s.jpg" %(handbagnames[4], item), 'wb') as out_file:
+            print(img)
+            shutil.copyfileobj(response, out_file)
+    except:
+        pass
+    item +=1
+
 </code></pre>
 
 ## Stage 1:Pre-processing
