@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Exploratory Data Analysis"
+title:  "Regression and Classification"
 date:   2017-11-30
-excerpt: "This project focused on exploratory data analysis based on SAT scores and drug use dataset. Exploratory Data Analysis also known as 'EDA' which is vital to the data science pipeline."
-image: "/images/pic02.jpg"
+excerpt: "One of Data Science key purpose is to model and predict trends. With the Ames housing dataset, regression modelling and classification are able to utilise."
+image: "/images/regression.jpg"
+permalink: /Project 2/
+
 ---
 
 ## How to Use This Theme
