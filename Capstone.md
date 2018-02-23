@@ -24,7 +24,7 @@ After considering different components of a data product by online retail store,
 ## Dataset
 The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
 
-<h3>Unordered</h3>
+<h3>Brands</h3>
 <ul>
   <li>Celine</li>
   <li>Chanel</li>
@@ -72,8 +72,9 @@ print("adding %s to folder" %(img))
 ## Stage 1:Pre-processing
 
 ### Setup
-### Manual clean-up of dataset
-### Image Augmentation
+#### Manual clean-up of dataset
+#### Image Augmentation
+#### Labelling of brands
 
 ## Stage 2: Splitting dataset
 ## Stage 3: Building a Convolutional Neural Network
