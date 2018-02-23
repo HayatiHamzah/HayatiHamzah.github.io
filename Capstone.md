@@ -7,7 +7,7 @@ image: "/images/bag1.jpg"
 permalink: /Capstone/
 ---
 
-## tl;dr
+## Summary
 In order to identify the brand of handbags, a deep neural network was built to recognize images from scratch with a precision of 97% and recall of 96% while explaining the techniques used throughout the process.
 
 ## Problem Statement
