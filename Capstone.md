@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: blog
 title:  "Handbag Brand detection"
 date:   2018-03-02
 excerpt: "via Image Classification using Deep Neural Networks"
 image: "/images/bag1.jpg"
-permalink: /Capstone/
+permalink: blog/Capstone/
 ---
 
 ## Summary
