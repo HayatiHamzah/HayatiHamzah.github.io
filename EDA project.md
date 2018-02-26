@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  "Exploratory Data Analysis"
 date:   2017-11-30
 excerpt: "This project focused on exploratory data analysis based on SAT scores and drug use dataset. Exploratory Data Analysis also known as 'EDA' which is vital to the data science pipeline."
