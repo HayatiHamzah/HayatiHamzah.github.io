@@ -5,6 +5,10 @@ date:   2018-02-4
 excerpt: "By scraping job postings from multiple job aggregators websites, this project is able understand the Singapore job market with Natural Language Processing (NLP)"
 image: "/images/scrap.jpg"
 permalink: /Project 3/
+sitemap:
+    priority: 0.7
+    lastmod: 2017-11-02
+    changefreq: weekly
 ---
 
 ## How to Use This Theme
