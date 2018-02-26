@@ -1,19 +1,19 @@
 ---
 layout: page
 title: Hayati Data Science Project
-description: When building a website it's helpful to see what the focus of your site is. This page is an example of how to show a website's focus.
-sitemap:
-    priority: 0.7
-    lastmod: 2018-02-21
-    changefreq: weekly
+description: All about asking the right questions and coding out effective solutions
 ---
 ## About me
 
 <span class="image left"><img src="{{ "/images/pic04.jpg" | absolute_url }}" alt="" /></span>
 
-Making steady content and conveying it well takes a great deal of research and, hence, time and exertion. Building a profound established comprehension of your target customer needs is critical as your principle objective ought to be to fulfill their requirements as awesome content. You should need to enhance their lives. Having significant content like this may not be simple by any methods. Be that as it may, in any case, it's a fundamental apparatus in the event that you expect to grow a fruitful and supportable business in the present web focused world.
+Hello, I am Hayati from tropical Singapore. 
 
-Receiving the benefits of content is a certain something. Be that as it may, it's so substantially less demanding once you begin conveying all the more successfully. The profitable content thought isn't just about bragging your item's capacities and general worth or your organization's achievements. You should concentrate less on advertising how awesome your item is and rather concentrate on indicating how valuable it is. This is a client focused approach as it concentrates on their issues and your answer for them. Making yourself fundamental is critical.
+I am a graduate from NUS Engineering School where I majored in Environmental Engineering. You could say that I do have a rather technical background as I am familiar with AutoCad and MicroStation. After a few work assignments in Environmental Engineering Company and, a Quantity Surveying and Project Management Company for a year, I pursued my interest in Data analytics and Statistics in June 2016. 
+
+My first experience with programming was Fortran, which I had to learn for a Civil Engineering class. Learning the fundamental of writing a 'for-loop' and defining variable gave me such a rush that I could never shake off. The first 'mini' project I wrote with Fortran was a 'BMI (Body-mass index)' calculator.
+
+Continued my programming interest after my graduation with Udemy Complete Python Bootcamp:From Zero to Hero by Jose Portialla. 
 
 ### Area of Interest
 <div class="box">
@@ -25,3 +25,6 @@ Receiving the benefits of content is a certain something. Be that as it may, it'
 <span class="image left"><img src="{{ "/images/pic05.jpg" | absolute_url }}" alt="" /></span>
 
 On social media, we may share our own thoughts and advance our image notwithstanding spreading musings for different associations and affiliations. With such a critical number of associations with people and relationship on social media, our experience can be over-burden with a considerable measure of information.
+
+## Backstory
+In my last semester in NUS, I found myself rather disconnected with the work I was invovled with. The 
