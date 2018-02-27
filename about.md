@@ -16,8 +16,6 @@ My first experience with programming was Fortran, which I had to learn for one o
 Continued my programming interest after my graduation with Udemy Complete Python Bootcamp:From Zero to Hero by Jose Portialla. Apart from the online course, I am an avid reader of Data Science websites such as KDNugget, DataScienceCentral and others. Eventually, I decided to enrolled into General Assembly Data Science Immersive from November 2017 to February 2018.
 ### Purpose of the website
 <div class="6u$ 12u$(small)">
-
-<h3>Ordered</h3>
 <ol>
   <li>Data Science fans can watch this space to learn about simple ways to create value from their data</li>
   <li>Beginners are able to understand how to create data products such as image classifiers</li>
@@ -34,7 +32,7 @@ This blog has something for everyone who is a stranger to data science. Those wh
 
 <span class="image left"><img src="{{ "/images/pic05.jpg" | absolute_url }}" alt="" /></span>
 
-On social media, people tend to share their personal thoughts and advance our image notwithstanding spreading musings for different associations and affiliations. With such a critical number of associations with people and relationship on social media, our experience can be over-burden with a considerable measure of information. However, if we harness powerful tools such as Natural Language Processing (NLP) and machine learning techniques, we are visualise this data and put them into actionable insights.
+On social media, people tend to share their personal thoughts and advance our image notwithstanding spreading musings for different associations and affiliations. With such a critical number of associations with people and relationship on social media, our experience can be over-burden with a considerable measure of information. However, using powerful tools such as Natural Language Processing (NLP) and machine learning techniques, we are visualise this data and put them into actionable insights.
 
 ## Backstory
 In my last semester in NUS, I found myself rather disconnected with the work I was involved with. The fascinating work of environmental engineering has been able to open my mind to optimising workflow and resources. Yet, this was a disconnect between the work I did and understanding the intrinsic needs of others. 
