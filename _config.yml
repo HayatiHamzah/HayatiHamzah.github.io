@@ -9,7 +9,7 @@ url: "" # the base hostname & protocol for your site
 defaults:
 - scope:
     path: ''
-    type: post
+    type: posts
   values:
     permalink: "/blog/:title/"
     layout: post
@@ -42,7 +42,7 @@ github:             default
 
 # personal
 location:           Singapore, SG
-phone:              -
+phone:              Unavailable
 email:              hayatibintehamzah1993@gmail.com
 
 
