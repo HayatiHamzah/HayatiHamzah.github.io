@@ -1,10 +1,10 @@
 ---
-layout: blog
+layout: post
 title:  "Regression and Classification"
 date:   2017-11-30
 excerpt: "One of Data Science key purpose is to model and predict trends. With the Ames housing dataset, regression modelling and classification are able to utilise."
 image: "/images/regression.jpg"
-permalink: /blog/Project 2/
+permalink: /Project 2/
 
 ---
 
