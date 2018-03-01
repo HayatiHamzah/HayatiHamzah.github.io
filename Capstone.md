@@ -17,13 +17,14 @@ In order to identify the brand of handbags, a deep neural network was built to r
 ## Problem Statement
 Machine learning are one of essential data science tools for businesses to understand their content and how their users/consumer interact with it. These efforts have mainly focused on Natural Language Processing (NLP) where we have created tools that can automatically detect topics, entities (e.g., people, organizations, products), and keywords in an article published by any of their products. This information serves as useful building blocks for other tools to improve both the user and editorial experience.
 
-Apart from textual content, most online retail stores and e-commerce platforms include  vivid videos and images. These graphical media provide exciting frontiers where we can utilize and Machine Learning to enhance our experiences.
+Apart from textual content, most online retail stores and e-commerce platforms include  vivid videos and images. These graphical media provide exciting frontiers where we can utilize and Machine Learning to enhance reach to the right users. Building data products which are able to recognize uique and vivid images, we are able to further understand the sentiments, insights and preferences of users on e-commerce platforms or within a location. Companies will be able to anticipate incoming demand of potentially profitable items.
 
-After considering different components of a data product by online retail store, this projects will focus on creating a prototype handbag brand classifier. We decided to focus on handbags because they are objects from the fashion domain, where Condé Nast already has a significant presence. Furthermore, from a computer vision perspective, handbags are rather complex objects. Many brands have features that distinguish them visually. These features range from the more obvious (e.g., patterns, logos) to the less visible (e.g., textures, pockets, latches, straps). Indeed, a “human expert” can make a reasonably good prediction of the handbag's brand without having seen that exact model.
-
+## Why handbags?
+The undeniable competition between different e-commerce giants producing in-house data products such as Asos mobile application and Zalando shows that there is immense commercial value in data product. After considering different components of a data product by online retail stores such as recommender system and image recognition tech, this projects will focus on creating a prototype handbag brand classifier. Luxury handbags will be the focus of this project as they are highly sensationalised objects from the fashion domain. Moreover, from a computer vision perspective, handbags are rather complicated objects within an image. Many luxury brands have design distinct features which differentiates them visually. These features range from the more obvious (e.g., patterns, logos) to the less visible (e.g., textures, pockets, latches, straps). Of course, any fashion IT girl can give an accurate prediction of the handbag's brand without physically inspecting the handbag. How are we suppose to identify which brand is the hottest each season without a classifier on social media?
 
 ## Introduction
-<blockquote>  Machine learning  </blockquote>
+Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. 
+<blockquote>  Machine learning:   </blockquote>
 
 ## Dataset
 The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
@@ -82,12 +83,22 @@ print("adding %s to folder" %(img))
 
 ## Stage 2: Splitting dataset
 ## Stage 3: Building a Convolutional Neural Network
+With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. Before, we further explore different types of neural networks, we must understand some basic neural network techniques used in this project. 
+
+<blockquote>  Activation:  </blockquote>
+<blockquote>  Max-pooling:  </blockquote>
+<blockquote>  Dropout:  </blockquote>
+<blockquote>  Soft-max:  </blockquote>
+
+
 ## Results 
+Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
 
 ## Conclusion
+There are 3 main things about this project. Quality of data set. Image augmentation and 
 
 ## Future project
 
 ### Expand dataset
-### Web app
 
+### Web app
