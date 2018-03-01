@@ -23,7 +23,7 @@ Apart from textual content, most online retail stores and e-commerce platforms i
 The undeniable competition between different e-commerce giants producing in-house data products such as Asos mobile application and Zalando shows that there is immense commercial value in data product. After considering different components of a data product by online retail stores such as recommender system and image recognition tech, this projects will focus on creating a prototype handbag brand classifier. Luxury handbags will be the focus of this project as they are highly sensationalised objects from the fashion domain. Moreover, from a computer vision perspective, handbags are rather complicated objects within an image. Many luxury brands have design distinct features which differentiates them visually. These features range from the more obvious (e.g., patterns, logos) to the less visible (e.g., textures, pockets, latches, straps). Of course, any fashion IT girl can give an accurate prediction of the handbag's brand without physically inspecting the handbag. How are we suppose to identify which brand is the hottest each season without a classifier on social media?
 
 ## Introduction
-Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. 
+Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 255). Computers 
 <blockquote>  Machine learning:   </blockquote>
 
 ## Dataset
