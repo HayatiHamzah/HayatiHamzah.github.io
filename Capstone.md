@@ -16,14 +16,8 @@ In order to identify the brand of handbags, a deep neural network was built to r
 
 ## Problem Statement
 Machine learning are one of essential data science tools for businesses to understand their content and how their users/consumer interact with it. These efforts have mainly focused on Natural Language Processing (NLP) where we have created tools that can automatically detect topics, entities (e.g., people, organizations, products), and keywords in an article published by any of their products. This information serves as useful building blocks for other tools to improve both the user and editorial experience.
-<style type="text/css">
-.centerImage
-{
-text-align:center;
-display:block;
-}
-</style>
-<p> <img src="/images/retail.jpg" class="centerImage" width="350" height="350"></p>
+
+<center> <img src="/images/retail.jpg" class="centerImage" width="350" height="350"></center>
 
 Apart from textual content, most online retail stores and e-commerce platforms include  vivid videos and images. These graphical media provide exciting frontiers where we can utilize and Machine Learning to enhance reach to the right users. Building data products which are able to recognize uique and vivid images, we are able to further understand the sentiments, insights and preferences of users on e-commerce platforms or within a location. Companies will be able to anticipate incoming demand of potentially profitable items.
 
