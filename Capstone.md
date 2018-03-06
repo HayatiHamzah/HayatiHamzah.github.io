@@ -28,7 +28,7 @@ The undeniable competition between different e-commerce giants producing in-hous
 <p>Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 
 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. </p>
 
-<center><img src="/images/capstone1.jpg" height="300" width="300"></center>
+<center><img src="/images/capstone1.jpg" height="400" width="400"></center>
 
 In this project, we will class each brand to the images in the data set. Thus, a new image is added into the computer, it interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one. This is done by machine learning.
 
@@ -43,7 +43,7 @@ There are three main factors that differentiates a machine learning project and 
 
 They use <u> neural networks </u> 
 
-<center><img src="/images/NN.gif" height="200" width="450"></center>
+<center><img src="/images/NN.gif" height="300" width="450"></center>
 
 
 <blockquote>  Neural Networks: A Neural Network consists of an interconnected group of nodes called neurons. The input feature variables from the data are passed to these neurons as a multi-variable linear combination, where the values multiplied by each feature variable are known as weights. A non-linearity is then applied to this linear combination which gives the neural network the ability to model complex non-linear relationships. </blockquote>
