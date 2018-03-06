@@ -17,16 +17,37 @@ In order to identify the brand of handbags, a deep neural network was built to r
 ## Problem Statement
 Machine learning are one of essential data science tools for businesses to understand their content and how their users/consumer interact with it. These efforts have mainly focused on Natural Language Processing (NLP) where we have created tools that can automatically detect topics, entities (e.g., people, organizations, products), and keywords in an article published by any of their products. This information serves as useful building blocks for other tools to improve both the user and editorial experience.
 
+[Insert some retail relevant photo]
+
 Apart from textual content, most online retail stores and e-commerce platforms include  vivid videos and images. These graphical media provide exciting frontiers where we can utilize and Machine Learning to enhance reach to the right users. Building data products which are able to recognize uique and vivid images, we are able to further understand the sentiments, insights and preferences of users on e-commerce platforms or within a location. Companies will be able to anticipate incoming demand of potentially profitable items.
 
 ## Why handbags?
 The undeniable competition between different e-commerce giants producing in-house data products such as Asos mobile application and Zalando shows that there is immense commercial value in data product. After considering different components of a data product by online retail stores such as recommender system and image recognition tech, this projects will focus on creating a prototype handbag brand classifier. Luxury handbags will be the focus of this project as they are highly sensationalised objects from the fashion domain. Moreover, from a computer vision perspective, handbags are rather complicated objects within an image. Many luxury brands have design distinct features which differentiates them visually. These features range from the more obvious (e.g., patterns, logos) to the less visible (e.g., textures, pockets, latches, straps). Of course, any fashion IT girl can give an accurate prediction of the handbag's brand without physically inspecting the handbag. How are we suppose to identify which brand is the hottest each season without a classifier on social media?
 
 ## Introduction
-Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. When the computer interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one.
+Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. 
+[Add rgb image here]
+In this project, we will class each brand to the images in the data set. Thus, a new image is added into the computer, it interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one. This is done by machine learning.
 
-<blockquote>  Machine learning:   </blockquote>
-<blockquote>  Neural Networks:   </blockquote>
+<blockquote>  Machine learning: Algorithms that can make predictions through pattern recognition   </blockquote>
+
+Why is this a machine learning project? 
+
+There are three main factors that differentiates a machine learning project and a deep learning (DL) algorithm. The first is the size of the data points. Most machine learning (ML) algorithm are in the range of 100-10000 data points while deep learning algorithm require at least a million data points. The second factor is the amount of supervision of the neural network requires. ML algorithm requires much more supervision in terms of selecting optimizers, regularisation and the quality of the data set. On the other hand, DL algorithm develop the neural networks as more information inserted into it. Lastly, DL algorithm requires more computing power than ML algorithm. 
+
+How do machine learning algorithm process their data?
+
+They use <u> neural networks </u> 
+[Add neural network image here]
+<blockquote>  Neural Networks: A Neural Network consists of an interconnected group of nodes called neurons. The input feature variables from the data are passed to these neurons as a multi-variable linear combination, where the values multiplied by each feature variable are known as weights. A non-linearity is then applied to this linear combination which gives the neural network the ability to model complex non-linear relationships. </blockquote>
+
+Why is Convolutional Neural Network applicable for image?
+ The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
+
+If you consider any image, proximity has a strong relation with similarity in it and convolutional neural networks specifically take advantage of this fact. This implies, in a given image, two pixels that are nearer to each other are more likely to be related than the two pixels that are apart from each other. Nevertheless, in a usual neural network, every pixel is linked to every single neuron. The added computational load makes the network less accurate in this case.
+
+By killing a lot of these less significant connections, convolution solves this problem. In technical terms, convolutional neural networks make the image processing computationally manageable through filtering the connections by proximity. In a given layer, rather than linking every input to every neuron, convolutional neural networks restrict the connections intentionally so that any one neuron accepts the inputs only from a small subsection of the layer before it(say like 5*5 or 3*3 pixels). Hence, each neuron is responsible for processing only a certain portion of an image.(Incidentally, this is almost how the individual cortical neurons function in your brain. Each neuron responds to only a small portion of your complete visual field).
+
 <blockquote>  Convolutional Neural Networks:   </blockquote>
 
 
