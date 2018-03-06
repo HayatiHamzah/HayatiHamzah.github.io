@@ -27,7 +27,7 @@ The undeniable competition between different e-commerce giants producing in-hous
 ## Introduction
 Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 
 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. 
-<img src="/images/capstone1.jpg" width="100%">
+<img src="/images/capstone1.jpg" width="500">
 In this project, we will class each brand to the images in the data set. Thus, a new image is added into the computer, it interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one. This is done by machine learning.
 
 <blockquote>  Machine learning: Algorithms that can make predictions through pattern recognition   </blockquote>
