@@ -26,7 +26,7 @@ The undeniable competition between different e-commerce giants producing in-hous
 
 ## Introduction
 
-<center><img src="/images/capstone1.jpg" height="400" width="440"></center>
+<center><img src="/images/capstone1.jpg" height="3800" width="440"></center>
 
 <p>Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 
 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. </p>
