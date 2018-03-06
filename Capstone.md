@@ -28,10 +28,9 @@ The undeniable competition between different e-commerce giants producing in-hous
 <p>Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 
 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. </p>
 
-<p><img src="/images/capstone1.jpg" align="bottom" width="350" height="350"></p>
+<a href="#" class="image main"><img src="{{ "/images/capstone1.jpg" | absolute_url }}" alt="" /></a>
 
-<p>
-In this project, we will class each brand to the images in the data set. Thus, a new image is added into the computer, it interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one. This is done by machine learning.</p>
+In this project, we will class each brand to the images in the data set. Thus, a new image is added into the computer, it interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one. This is done by machine learning.
 
 <blockquote>  Machine learning: Algorithms that can make predictions through pattern recognition   </blockquote>
 
@@ -42,7 +41,9 @@ There are three main factors that differentiates a machine learning project and 
 How do machine learning algorithm process their data?
 
 They use <u> neural networks </u> 
-<p><img src="/images/NN.gif" align="bottom" width="400" height="200"></p>
+
+<a href="#" class="image main"><img src="{{ "/images/NN.gif" | absolute_url }}" alt="" /></a>
+
 
 <blockquote>  Neural Networks: A Neural Network consists of an interconnected group of nodes called neurons. The input feature variables from the data are passed to these neurons as a multi-variable linear combination, where the values multiplied by each feature variable are known as weights. A non-linearity is then applied to this linear combination which gives the neural network the ability to model complex non-linear relationships. </blockquote>
 
