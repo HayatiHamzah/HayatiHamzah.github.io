@@ -58,7 +58,7 @@ If you consider any image, proximity has a strong relation with similarity in it
 By killing a lot of these less significant connections, convolution solves this problem. In technical terms, convolutional neural networks make the image processing computationally manageable through filtering the connections by proximity. In a given layer, rather than linking every input to every neuron, convolutional neural networks restrict the connections intentionally so that any one neuron accepts the inputs only from a small subsection of the layer before it(say like 5*5 or 3*3 pixels). Hence, each neuron is responsible for processing only a certain portion of an image.(Incidentally, this is almost how the individual cortical neurons function in your brain. Each neuron responds to only a small portion of your complete visual field).
 
 ## Project Workflow
-<center><img src="/images/capstone2.jpg" height="350" width="480"></center>
+<center><img src="/images/capstone2.jpg" height="350" width="500"></center>
 
 
 ## Dataset
