@@ -28,17 +28,18 @@ The undeniable competition between different e-commerce giants producing in-hous
 <p>Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 
 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. </p>
 
-<center><img src="/images/capstone.jpg" height="300" width="300"></center>
+<center><img src="/images/capstone1.jpg" height="300" width="300"></center>
 
 In this project, we will class each brand to the images in the data set. Thus, a new image is added into the computer, it interprets a new image, it will convert the image to an array by using the same technique, which then compares the patterns of numbers against the already-known objects. The computer then allots confidence scores for each class. The class with the highest confidence score is usually the predicted one. This is done by machine learning.
 
+
 <blockquote>  Machine learning: Algorithms that can make predictions through pattern recognition   </blockquote>
 
-Why is this a machine learning project? 
+<strong>Why is this a machine learning project? </strong>
 
 There are three main factors that differentiates a machine learning project and a deep learning (DL) algorithm. The first is the size of the data points. Most machine learning (ML) algorithm are in the range of 100-10000 data points while deep learning algorithm require at least a million data points. The second factor is the amount of supervision of the neural network requires. ML algorithm requires much more supervision in terms of selecting optimizers, regularisation and the quality of the data set. On the other hand, DL algorithm develop the neural networks as more information inserted into it. Lastly, DL algorithm requires more computing power than ML algorithm. 
 
-How do machine learning algorithm process their data?
+<strong> How do machine learning algorithm process their data? </strong>
 
 They use <u> neural networks </u> 
 
