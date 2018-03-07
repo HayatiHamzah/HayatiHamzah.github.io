@@ -82,7 +82,7 @@ The dataset used in this classifier was collected from Google Images using perso
 </ul>
 
 ## Stage 1:Scraping Images
-<code><pre>
+<pre><code>
 '''The handbag brands are stored in a csv files'''
 bags=pd.read_csv("./bag.csv")
 handbagnames=bags.values.T.tolist()[0]
@@ -114,7 +114,7 @@ print("adding %s to folder" %(img))
         pass
     item +=1
 
-</pre></code>
+</code></pre>
 
 ## Stage 2:Pre-processing
 
