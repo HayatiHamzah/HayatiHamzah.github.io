@@ -18,6 +18,7 @@ In order to identify the brand of handbags, a deep neural network was built to r
 Machine learning are one of essential data science tools for businesses to understand their content and how their users/consumer interact with it. These efforts have mainly focused on Natural Language Processing (NLP) where we have created tools that can automatically detect topics, entities (e.g., people, organizations, products), and keywords in an article published by any of their products. This information serves as useful building blocks for other tools to improve both the user and editorial experience.
 
 <center><img src="/images/retail.jpg" height="300" width="300"></center>
+<center><em>Comic strip about data shaping how merchandiser work</em></center>
 
 Apart from textual content, most online retail stores and e-commerce platforms include  vivid videos and images. These graphical media provide exciting frontiers where we can utilize and Machine Learning to enhance reach to the right users. Building data products which are able to recognize uique and vivid images, we are able to further understand the sentiments, insights and preferences of users on e-commerce platforms or within a location. Companies will be able to anticipate incoming demand of potentially profitable items.
 
@@ -27,6 +28,7 @@ The undeniable competition between different e-commerce giants producing in-hous
 ## Introduction
 
 <center><img src="/images/capstone1.jpg" height="380" width="420"></center>
+<center><em>Visual aid of how computers see images</em></center>
 
 <p>Before we go into complex concepts such as machine learning and neural network, we must understand how the computer views images. Computers extract images based on the pixels they present. In coloured images as RGB values ( list of numbers which represent the combination of red, green and blue from a nubmer range of 0 to 
 255).  Computers could then extract the RGB value of each pixel and put the result in an array for interpretation. </p>
@@ -46,12 +48,13 @@ There are three main factors that differentiates a machine learning project and 
 They use <u>neural networks</u> 
 
 <center><img src="/images/NN.gif" height="300" width="450"></center>
+<center><em>Visual aid of how computers see images</em></center>
 
 
 <blockquote>  Neural Networks: A Neural Network consists of an interconnected group of nodes called neurons. The input feature variables from the data are passed to these neurons as a multi-variable linear combination, where the values multiplied by each feature variable are known as weights. A non-linearity is then applied to this linear combination which gives the neural network the ability to model complex non-linear relationships. </blockquote>
 
-Why is Convolutional Neural Network applicable for image?
- The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
+<strong>Why is Convolutional Neural Network applicable for image?</strong>
+The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
 
 If you consider any image, proximity has a strong relation with similarity in it and convolutional neural networks specifically take advantage of this fact. This implies, in a given image, two pixels that are nearer to each other are more likely to be related than the two pixels that are apart from each other. Nevertheless, in a usual neural network, every pixel is linked to every single neuron. The added computational load makes the network less accurate in this case.
 
@@ -73,7 +76,7 @@ The dataset used in this classifier was collected from Google Images using perso
   <li>Hermes</li>
 </ul>
 
-## Stage 0:Scraping Images
+## Stage 1:Scraping Images
 <pre><code>
 '''The handbag brands are stored in a csv files'''
 bags=pd.read_csv("./bag.csv")
@@ -108,7 +111,7 @@ print("adding %s to folder" %(img))
 
 </code></pre>
 
-## Stage 1:Pre-processing
+## Stage 2:Pre-processing
 
 ### Setup
 <pre><code>
@@ -132,13 +135,56 @@ from keras.layers import Activation, Dropout, Flatten, Dense
 #### Manual clean-up of dataset
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
 
-#### Image Augmentation
+#### Image Augmentation & Splitting dataset
 <center><img src="/images/augmentation.png" height="350" width="500"></center>
-
+<code><pre>
+data/
+    train/
+        Celine/
+            handbag_celine_img_0.jpg
+            handbag_celine_img_1.jpg
+            ...
+        Chanel/
+            handbag_chanel_img_0.jpg
+            handbag_chanel_img_1.jpg
+            ...
+        Gucci/
+            handbag_gucci_img_0.jpg
+            handbag_gucci_img_1.jpg
+            ...
+       Givenchy/
+            handbag_givenchy_img_0.jpg
+            handbag_givenchy_img_1.jpg
+            ...
+       Hermes/
+            handbag_hermes_img_0.jpg
+            handbag_hermes_img_1.jpg
+            ...
+    validation/
+        Celine/
+            handbag_celine_img_0.jpg
+            handbag_celine_img_1.jpg
+            ...
+        Chanel/
+            handbag_chanel_img_0.jpg
+            handbag_chanel_img_1.jpg
+            ...
+        Gucci/
+            handbag_gucci_img_0.jpg
+            handbag_gucci_img_1.jpg
+            ...
+       Givenchy/
+            handbag_givenchy_img_0.jpg
+            handbag_givenchy_img_1.jpg
+            ...
+       Hermes/
+            handbag_hermes_img_0.jpg
+            handbag_hermes_img_1.jpg
+            ...
+</code></pre>
+a training data directory and validation data directory containing one subdirectory per image class, filled with .png or .jpg images:In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
-
-## Stage 2: Splitting dataset
 
 ## Stage 3: Building a Convolutional Neural Network
 With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. Before, we further explore different types of neural networks, we must understand some basic neural network techniques used in this project. 
@@ -150,7 +196,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 
 <center><img src="/images/final_model.jpg" height="350" width="700"></center>
 
-## Results 
+## Stage 4: Testing the model
 Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
 
 ## Conclusion
