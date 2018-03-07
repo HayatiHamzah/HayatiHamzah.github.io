@@ -137,6 +137,9 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 </pre></code>
+
+
+
 #### Manual clean-up of dataset
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
 <center><em>Snapshot of Google Search</em></center>
@@ -190,6 +193,7 @@ data/
             handbag_hermes_img_1.jpg
             ...
 </pre></code>
+
 In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
 <center><img src="/images/augmentation.png" height="350" width="500"></center>
 <center><em>An example how the image can be shift around during training</em></center>
@@ -216,9 +220,11 @@ validation_generator = test_datagen.flow_from_directory(
     class_mode='categorical')
 </pre></code>
 
+
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
 <center><em>Labelling each image to their respective classes</em></center>
+
 
 ## Stage 3: Building a Convolutional Neural Network
 With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. These are the basic neural network layers used in this project:
