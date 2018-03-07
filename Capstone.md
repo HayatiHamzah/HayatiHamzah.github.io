@@ -201,11 +201,11 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 
 <blockquote>  Activation: The layer which consist of the activation function which determines what output a node will generate base upon its input</blockquote>
 
-<center><img src="/images/relu.png" height="150" width="700"></center>
+<center><img src="/images/relu.png" height="500" width="700"></center>
 <center><em>'Relu' activation function within the layer</em></center>
 We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function will apply an elementwise activation function, such as the max(0,X) thresholding at zero. This leaves the size of the volume unchanged ([32x32x12]). 
 
-<center><img src="/images/softmax.png" height="150" width="700"></center>
+<center><img src="/images/softmax.png" height="500" width="700"></center>
 <center><em>'Softmax' activation function within the layer</em></center>
 'Softmax' function is an extension of the sigmoid function to the multiclass case in conjunction with the Cross Entrophy loss function(formula in the diagram above. The Softmax layer normalizes outputs of the previous layer so that they sum up to one. Typically, the units of the previous layer model an un-normalized score of how likely the input is to belong to a particular class. The softmax layer normalized this so that the output represents the probability for every class. 
 
