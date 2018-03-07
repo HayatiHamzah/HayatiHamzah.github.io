@@ -207,11 +207,11 @@ We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function w
 
 <blockquote>  Max-pooling: Layer which takes the largest value from one patch of an image, places it in a new matrix next to the max values from other patches, and discards the rest of the information contained in the activation maps from the activation layer.  </blockquote>
 
-<center><img src="/images/dropout.jpg" height="300" width="720"></center>
+<center><img src="/images/dropout.jpg" height="300" width="750"></center>
 
 <blockquote>  Dropout: The layer where it regularizes the parameters within the network. During training, dropout is implemented by only keeping a neuron active with some probability p (a hyper-parameter), or setting it to zero otherwise.</blockquote>
 
-<center><img src="/images/final_model.jpg" height="300" width="700"></center>
+<center><img src="/images/final_model.jpg" height="320" width="700"></center>
 
 ## Stage 4: Testing the model
 <center><img src="/images/results.png" height="450" width="600"></center>
