@@ -70,7 +70,7 @@ By killing a lot of these less significant connections, convolution solves this 
 This project have 5 main stages. We scrap images from Google Images to "Get Data" in Stage 1. Stage 2 requires us to manual review the images scrap, conduct image augmentation on the training data set and label the images. Stage 3 is where we build the model using Keras with a TensorFlow backend. This step is done through applying VGGnet-inspired architecture without a pre-trained layer. Stage 4 allows us to test the accuracy of our model with a new set of images. 
 
 ## Dataset
-The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
+The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only include one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
 
 <h3>Brands</h3>
 <ul>
@@ -139,6 +139,9 @@ from keras.layers import Activation, Dropout, Flatten, Dense
 </code></pre>
 #### Manual clean-up of dataset
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
+<center><em>Snapshot of Google Search</em></center>
+
+The data used here was collected from Google Image using Selenium and BeautifulSoup. All the images were reviewed manually before being added to the dataset. The data contains selfies and other amateur images, white background studio style images, professional fashion and runway images. An image was allowed to contain more than one handbag but since we did not include any object detection we only included multiple handbags if they were the same brand. Images with "Outfit of the Day' shots where the hangbag cannot be seen clearly, the image is removed. Amateur photos which did not hightlight the key features of handbag was removed too.
 
 #### Image Augmentation & Splitting dataset
 A training data directory and validation data directory containing one subdirectory per image class, filled with .jpg images:
@@ -211,7 +214,7 @@ validation_generator = test_datagen.flow_from_directory(
     target_size=(img_width, img_height),
     batch_size=batch_size,
     class_mode='categorical')
-</code></pre>
+</pre></code>
 
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
@@ -246,7 +249,37 @@ We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function w
 <center><em>(Left) Neural Networks before and after dropouts. (Right) Probability of neuron kept active before and after dropout.</em></center>
 
 <blockquote>  Dropout: The layer where it regularizes the parameters within the network. During training, dropout is implemented by only keeping a neuron active with some probability p (a hyper-parameter), or setting it to zero otherwise.</blockquote>
+Model Code: 
+<code> 
+num_classes = 5
+model = Sequential()
+model.add(Conv2D(32, (3, 3), input_shape=input_shape))
+model.add(Activation('relu'))
+model.add(Conv2D(32, 3, 3))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
 
+model.add(Conv2D(64, (3, 3)))
+model.add(Activation('relu'))
+model.add(Conv2D(64, 3, 3))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, (3, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128))
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes))
+model.add(Activation('softmax'))
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='Adam',
+              metrics=['accuracy'])
+</code>
 <center><img src="/images/final_model.jpg" height="340" width="700"></center>
 <center><em> 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. The activation function of 'relu' function except the last layer is the 'softmax' function. </em></center>
 ## Stage 4: Testing the model
