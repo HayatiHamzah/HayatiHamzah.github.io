@@ -114,7 +114,7 @@ print("adding %s to folder" %(img))
         pass
     item +=1
 
-</code></pre>
+</pre></code>
 
 ## Stage 2:Pre-processing
 
