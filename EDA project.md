@@ -737,15 +737,15 @@ sns.distplot(verbal, bins= 50, kde=False)
 plt.show()
 ```
 
-
+<center><img src="/Project2_SAT_EDA/output_24_0.png" height="380" width="420"></center>
 ![png](output_24_0.png)
 
 
-
+<center><img src="/Project2_SAT_EDA/output_24_1.png" height="380" width="420"></center>
 ![png](output_24_1.png)
 
 
-
+<center><img src="/Project2_SAT_EDA/output_24_2.png" height="380" width="420"></center>
 ![png](output_24_2.png)
 
 
