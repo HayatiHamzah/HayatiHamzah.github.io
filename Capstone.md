@@ -48,12 +48,13 @@ There are three main factors that differentiates a machine learning project and 
 They use <u>neural networks</u> 
 
 <center><img src="/images/NN.gif" height="300" width="450"></center>
-<center><em>Visual aid of how computers see images</em></center>
+<center><em>Neural Networks are trained using Stochastic Gradient Descent (SGD) and the backpropagation algorithm (both displayed in the GIF above).</em></center>
 
 
 <blockquote>  Neural Networks: A Neural Network consists of an interconnected group of nodes called neurons. The input feature variables from the data are passed to these neurons as a multi-variable linear combination, where the values multiplied by each feature variable are known as weights. A non-linearity is then applied to this linear combination which gives the neural network the ability to model complex non-linear relationships. </blockquote>
 
 <strong>Why is Convolutional Neural Network applicable for image?</strong>
+[insert cnn image]
 The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
 
 If you consider any image, proximity has a strong relation with similarity in it and convolutional neural networks specifically take advantage of this fact. This implies, in a given image, two pixels that are nearer to each other are more likely to be related than the two pixels that are apart from each other. Nevertheless, in a usual neural network, every pixel is linked to every single neuron. The added computational load makes the network less accurate in this case.
@@ -63,7 +64,7 @@ By killing a lot of these less significant connections, convolution solves this 
 ## Project Workflow
 <center><img src="/images/capstone2.jpg" height="320" width="500"></center>
 
-
+This project have 5 main stages. We scrap images from Google Images to "Get Data" in Stage 1. Stage 2 requires us to manual review the images scrap, conduct image augmentation on the training data set and label the images. Stage 3 is where we build the model using Keras with a TensorFlow backend. This step is done through applying VGGnet-inspired architecture without a pre-trained layer. Stage 4 allows us to test the accuracy of our model with a new set of images. 
 ## Dataset
 The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
 
