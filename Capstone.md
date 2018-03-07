@@ -43,7 +43,7 @@ There are three main factors that differentiates a machine learning project and 
 
 <strong> How do machine learning algorithm process their data? </strong>
 
-They use <u> neural networks </u> 
+They use <u>neural networks</u> 
 
 <center><img src="/images/NN.gif" height="300" width="450"></center>
 
@@ -78,7 +78,7 @@ The dataset used in this classifier was collected from Google Images using perso
 '''The handbag brands are stored in a csv files'''
 bags=pd.read_csv("./bag.csv")
 handbagnames=bags.values.T.tolist()[0]
-typeofbags=bags.values.T.tolist()[1]
+typeofbags=bags.values.T.tolist()[0]
 url=[]
 
 for handbag in handbagnames:
@@ -86,7 +86,7 @@ for handbag in handbagnames:
     
 driver = webdriver.Chrome(executable_path="/Users/hayatibintehamzah/Documents/GitHub/DSIstuff/Capstone/chromedriver")
 
-driver.get(url[4])
+driver.get(url[0])
 WebDriverWait(driver, timeout=100)
 time.sleep(20)
 page_source = driver.page_source
