@@ -54,6 +54,7 @@ They use <u>neural networks</u>
 <blockquote>  Neural Networks: A Neural Network consists of an interconnected group of nodes called neurons. The input feature variables from the data are passed to these neurons as a multi-variable linear combination, where the values multiplied by each feature variable are known as weights. A non-linearity is then applied to this linear combination which gives the neural network the ability to model complex non-linear relationships. </blockquote>
 
 <strong>Why is Convolutional Neural Network applicable for image?</strong>
+
 [insert cnn image]
 The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
 
@@ -137,8 +138,8 @@ from keras.layers import Activation, Dropout, Flatten, Dense
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
 
 #### Image Augmentation & Splitting dataset
-<center><img src="/images/augmentation.png" height="350" width="500"></center>
-<code><pre>
+A training data directory and validation data directory containing one subdirectory per image class, filled with .jpg images:
+<pre><code>
 data/
     train/
         Celine/
@@ -183,7 +184,10 @@ data/
             handbag_hermes_img_1.jpg
             ...
 </code></pre>
-a training data directory and validation data directory containing one subdirectory per image class, filled with .png or .jpg images:In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
+In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
+<center><img src="/images/augmentation.png" height="350" width="500"></center>
+
+
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
 
