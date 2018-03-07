@@ -117,8 +117,7 @@ print("adding %s to folder" %(img))
 ## Stage 2:Pre-processing
 
 ### Setup
-<pre><code>
-import os,cv2
+<pre><code>import os,cv2
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
@@ -133,10 +132,7 @@ from keras.models import load_model
 from keras.models import Sequential, load_model
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Conv2D, MaxPooling2D
-from keras.layers import Activation, Dropout, Flatten, Dense
-</pre></code>
-
-
+from keras.layers import Activation, Dropout, Flatten, Dense</code></pre>
 
 #### Manual clean-up of dataset
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
@@ -146,8 +142,7 @@ The data used here was collected from Google Image using Selenium and BeautifulS
 
 #### Image Augmentation & Splitting dataset
 A training data directory and validation data directory containing one subdirectory per image class, filled with .jpg images:
-<pre><code>
-data/
+<pre><code>data/
     train/
         Celine/
             handbag_celine_img_0.jpg
@@ -190,7 +185,7 @@ data/
             handbag_hermes_img_0.jpg
             handbag_hermes_img_1.jpg
             ...
-</pre></code>
+</code></pre>
 
 In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
 <center><img src="/images/augmentation.png" height="350" width="500"></center>
@@ -216,7 +211,7 @@ validation_generator = test_datagen.flow_from_directory(
     target_size=(img_width, img_height),
     batch_size=batch_size,
     class_mode='categorical')
-</pre></code>
+</code></pre>
 
 
 #### Labelling of brands
@@ -254,8 +249,7 @@ We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function w
 
 <blockquote>  Dropout: The layer where it regularizes the parameters within the network. During training, dropout is implemented by only keeping a neuron active with some probability p (a hyper-parameter), or setting it to zero otherwise.</blockquote>
 Model Code: 
-<pre><code> 
-num_classes = 5
+<pre><code>num_classes = 5
 model = Sequential()
 model.add(Conv2D(32, (3, 3), input_shape=input_shape))
 model.add(Activation('relu'))
@@ -283,7 +277,7 @@ model.add(Activation('softmax'))
 model.compile(loss='categorical_crossentropy',
               optimizer='Adam',
               metrics=['accuracy'])
-</pre></code>
+</code></pre>
 <center><img src="/images/final_model.jpg" height="340" width="700"></center>
 <center><em> 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. The activation function of 'relu' function except the last layer is the 'softmax' function. </em></center>
 ## Stage 4: Testing the model
