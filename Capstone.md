@@ -148,7 +148,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 <blockquote>  Dropout:  </blockquote>
 <blockquote>  Soft-max:  </blockquote>
 
-<center><img src="/images/final_model.jpg" height="350" width="500"></center>
+<center><img src="/images/final_model.jpg" height="350" width="700"></center>
 
 ## Results 
 Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
