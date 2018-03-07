@@ -130,13 +130,13 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 </code></pre>
 #### Manual clean-up of dataset
-<center><img src="/images/manual_review.png" height="400" width="400"></center>
+<center><img src="/images/manual_review.png" height="400" width="500"></center>
 
 #### Image Augmentation
-<center><img src="/images/augmentation.png" height="400" width="400"></center>
+<center><img src="/images/augmentation.png" height="400" width="430"></center>
 
 #### Labelling of brands
-<center><img src="/images/label.jpg" height="400" width="400"></center>
+<center><img src="/images/label.jpg" height="400" width="430"></center>
 
 ## Stage 2: Splitting dataset
 
@@ -148,7 +148,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 <blockquote>  Dropout:  </blockquote>
 <blockquote>  Soft-max:  </blockquote>
 
-<center><img src="/images/final_model.jpg" height="400" width="400"></center>
+<center><img src="/images/final_model.jpg" height="350" width="500"></center>
 
 ## Results 
 Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
