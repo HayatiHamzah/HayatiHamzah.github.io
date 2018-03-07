@@ -192,12 +192,24 @@ In order to make the most of our few training examples, we will "augment" them v
 <center><img src="/images/label.jpg" height="350" width="500"></center>
 
 ## Stage 3: Building a Convolutional Neural Network
-With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. Before, we further explore different types of neural networks, we must understand some basic neural network techniques used in this project. 
+With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. These are the basic neural network layers used in this project:
 
-<blockquote>  Activation:  </blockquote>
-<blockquote>  Max-pooling:  </blockquote>
-<blockquote>  Dropout:  </blockquote>
-<blockquote>  Soft-max:  </blockquote>
+<center><img src="/images/CNN.png" height="150" width="700"></center>
+
+<blockquote>  Convolutional: This layer will compute the output of neurons that are connected to local regions in the input, each computing a dot product between their weights and a small region they are connected to in the input volume. This may result in volume such as [32x32x64] if we decided to use 64 filters</blockquote>
+
+
+<blockquote>  Activation: The layer which consist of the activation function which determines what output a node will generate base upon its input</blockquote>
+
+We've selected the 'Relu'  and 'Softmax' activation functions. RELU layer will apply an elementwise activation function, such as the max(0,x) thresholding at zero. This leaves the size of the volume unchanged ([32x32x12]).
+
+<center><img src="/images/maxpool.png" height="350" width="700"></center>
+
+<blockquote>  Max-pooling: Layer which takes the largest value from one patch of an image, places it in a new matrix next to the max values from other patches, and discards the rest of the information contained in the activation maps from the activation layer.  </blockquote>
+
+<center><img src="/images/dropout.jpg" height="350" width="700"></center>
+
+<blockquote>  Dropout: The layer where it regularizes the parameters within the network. During training, dropout is implemented by only keeping a neuron active with some probability p (a hyper-parameter), or setting it to zero otherwise.</blockquote>
 
 <center><img src="/images/final_model.jpg" height="350" width="700"></center>
 
