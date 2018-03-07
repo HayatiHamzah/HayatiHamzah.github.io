@@ -55,7 +55,8 @@ They use <u>neural networks</u>
 
 <strong>Why is Convolutional Neural Network applicable for image?</strong>
 
-[insert cnn image]
+<center><img src="/images/CNNA.jpg" height="200" width="700"></center>
+<center><em>Convolutional Neural Network Architecture</em></center>
 The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
 
 If you consider any image, proximity has a strong relation with similarity in it and convolutional neural networks specifically take advantage of this fact. This implies, in a given image, two pixels that are nearer to each other are more likely to be related than the two pixels that are apart from each other. Nevertheless, in a usual neural network, every pixel is linked to every single neuron. The added computational load makes the network less accurate in this case.
@@ -69,7 +70,7 @@ By killing a lot of these less significant connections, convolution solves this 
 This project have 5 main stages. We scrap images from Google Images to "Get Data" in Stage 1. Stage 2 requires us to manual review the images scrap, conduct image augmentation on the training data set and label the images. Stage 3 is where we build the model using Keras with a TensorFlow backend. This step is done through applying VGGnet-inspired architecture without a pre-trained layer. Stage 4 allows us to test the accuracy of our model with a new set of images. 
 
 ## Dataset
-The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
+The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only include one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
 
 <h3>Brands</h3>
 <ul>
@@ -81,8 +82,7 @@ The dataset used in this classifier was collected from Google Images using perso
 </ul>
 
 ## Stage 1:Scraping Images
-<pre><code>
-'''The handbag brands are stored in a csv files'''
+<pre><code>'''The handbag brands are stored in a csv files'''
 bags=pd.read_csv("./bag.csv")
 handbagnames=bags.values.T.tolist()[0]
 typeofbags=bags.values.T.tolist()[0]
@@ -112,14 +112,12 @@ print("adding %s to folder" %(img))
     except:
         pass
     item +=1
-
 </code></pre>
 
 ## Stage 2:Pre-processing
 
 ### Setup
-<pre><code>
-import os,cv2
+<pre><code>import os,cv2
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
@@ -134,15 +132,17 @@ from keras.models import load_model
 from keras.models import Sequential, load_model
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Conv2D, MaxPooling2D
-from keras.layers import Activation, Dropout, Flatten, Dense
-</code></pre>
+from keras.layers import Activation, Dropout, Flatten, Dense</code></pre>
+
 #### Manual clean-up of dataset
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
+<center><em>Snapshot of Google Search</em></center>
+
+The data used here was collected from Google Image using Selenium and BeautifulSoup. All the images were reviewed manually before being added to the dataset. The data contains selfies and other amateur images, white background studio style images, professional fashion and runway images. An image was allowed to contain more than one handbag but since we did not include any object detection we only included multiple handbags if they were the same brand. Images with "Outfit of the Day' shots where the hangbag cannot be seen clearly, the image is removed. Amateur photos which did not hightlight the key features of handbag was removed too.
 
 #### Image Augmentation & Splitting dataset
 A training data directory and validation data directory containing one subdirectory per image class, filled with .jpg images:
-<pre><code>
-data/
+<pre><code>data/
     train/
         Celine/
             handbag_celine_img_0.jpg
@@ -186,6 +186,7 @@ data/
             handbag_hermes_img_1.jpg
             ...
 </code></pre>
+
 In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
 <center><img src="/images/augmentation.png" height="350" width="500"></center>
 <center><em>An example how the image can be shift around during training</em></center>
@@ -212,9 +213,11 @@ validation_generator = test_datagen.flow_from_directory(
     class_mode='categorical')
 </code></pre>
 
+
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
 <center><em>Labelling each image to their respective classes</em></center>
+
 
 ## Stage 3: Building a Convolutional Neural Network
 With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. These are the basic neural network layers used in this project:
@@ -225,7 +228,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 <blockquote>  Convolutional: This layer will compute the output of neurons that are connected to local regions in the input, each computing a dot product between their weights and a small region they are connected to in the input volume. This may result in volume such as [32x32x64] if we decided to use 64 filters</blockquote>
 
 <center><img src="/images/cl.jpeg" height="150" width="700"></center>
-<center><em>A ConvNet arranges its neurons in three dimensions (width, height, depth), as visualized in one of the layers. Every layer of a ConvNet transforms the 3D input volume to a 3D output volume of neuron activations. In this example, the red input layer holds the image, so its width and height would be the dimensions of the image, and the depth would be 3 (Red, Green, Blue channels)</em></center>
+<center><em>Convolutional layer arranges its neurons in three dimensions (width, height, depth), as visualized in one of the layers. Every layer of a ConvNet transforms the 3D input volume to a 3D output volume of neuron activations. In this example, the red input layer holds the image, so its width and height would be the dimensions of the image, and the depth would be 3 (Red, Green, Blue channels)</em></center>
 
 <blockquote>  Activation: The layer which consist of the activation function which determines what output a node will generate base upon its input</blockquote>
 
@@ -245,7 +248,36 @@ We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function w
 <center><em>(Left) Neural Networks before and after dropouts. (Right) Probability of neuron kept active before and after dropout.</em></center>
 
 <blockquote>  Dropout: The layer where it regularizes the parameters within the network. During training, dropout is implemented by only keeping a neuron active with some probability p (a hyper-parameter), or setting it to zero otherwise.</blockquote>
+Model Code: 
+<pre><code>num_classes = 5
+model = Sequential()
+model.add(Conv2D(32, (3, 3), input_shape=input_shape))
+model.add(Activation('relu'))
+model.add(Conv2D(32, 3, 3))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
 
+model.add(Conv2D(64, (3, 3)))
+model.add(Activation('relu'))
+model.add(Conv2D(64, 3, 3))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, (3, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128))
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes))
+model.add(Activation('softmax'))
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='Adam',
+              metrics=['accuracy'])
+</code></pre>
 <center><img src="/images/final_model.jpg" height="340" width="700"></center>
 <center><em> 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. The activation function of 'relu' function except the last layer is the 'softmax' function. </em></center>
 ## Stage 4: Testing the model
