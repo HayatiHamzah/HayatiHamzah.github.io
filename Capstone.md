@@ -228,7 +228,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 <blockquote>  Convolutional: This layer will compute the output of neurons that are connected to local regions in the input, each computing a dot product between their weights and a small region they are connected to in the input volume. This may result in volume such as [32x32x64] if we decided to use 64 filters</blockquote>
 
 <center><img src="/images/cl.jpeg" height="150" width="700"></center>
-<center><em>A ConvNet arranges its neurons in three dimensions (width, height, depth), as visualized in one of the layers. Every layer of a ConvNet transforms the 3D input volume to a 3D output volume of neuron activations. In this example, the red input layer holds the image, so its width and height would be the dimensions of the image, and the depth would be 3 (Red, Green, Blue channels)</em></center>
+<center><em>Convolutional layer arranges its neurons in three dimensions (width, height, depth), as visualized in one of the layers. Every layer of a ConvNet transforms the 3D input volume to a 3D output volume of neuron activations. In this example, the red input layer holds the image, so its width and height would be the dimensions of the image, and the depth would be 3 (Red, Green, Blue channels)</em></center>
 
 <blockquote>  Activation: The layer which consist of the activation function which determines what output a node will generate base upon its input</blockquote>
 
