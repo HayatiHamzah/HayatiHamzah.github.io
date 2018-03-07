@@ -133,10 +133,10 @@ from keras.layers import Activation, Dropout, Flatten, Dense
 <center><img src="/images/manual_review.png" height="350" width="500"></center>
 
 #### Image Augmentation
-<center><img src="/images/augmentation.png" height="350" width="440"></center>
+<center><img src="/images/augmentation.png" height="350" width="500"></center>
 
 #### Labelling of brands
-<center><img src="/images/label.jpg" height="350" width="440"></center>
+<center><img src="/images/label.jpg" height="350" width="500"></center>
 
 ## Stage 2: Splitting dataset
 
