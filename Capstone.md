@@ -64,8 +64,10 @@ By killing a lot of these less significant connections, convolution solves this 
 
 ## Project Workflow
 <center><img src="/images/capstone2.jpg" height="320" width="500"></center>
+<center><em>Project outline</em></center>
 
 This project have 5 main stages. We scrap images from Google Images to "Get Data" in Stage 1. Stage 2 requires us to manual review the images scrap, conduct image augmentation on the training data set and label the images. Stage 3 is where we build the model using Keras with a TensorFlow backend. This step is done through applying VGGnet-inspired architecture without a pre-trained layer. Stage 4 allows us to test the accuracy of our model with a new set of images. 
+
 ## Dataset
 The dataset used in this classifier was collected from Google Images using personalised google search. With Selenium, BeautifulSoup and urllib, the images are collected locally and reviewed manually before being included into the finalised dataset. The data contains selfies, 'outfit of the day' and amateur images. Each image in the dataset can only iclude one image as the prototype does not include object localisation. In total, we collected an evenly-distributed dataset of 7,500 images across 5 brands:
 
@@ -186,18 +188,44 @@ data/
 </code></pre>
 In order to make the most of our few training examples, we will "augment" them via a number of random transformations, so that our model would never see twice the exact same picture. This helps prevent overfitting and helps the model generalize better.
 <center><img src="/images/augmentation.png" height="350" width="500"></center>
+<center><em>An example how the image can be shift around during training</em></center>
+Image augmentation artificially creates training images through different ways of processing or combination of multiple processing, such as random rotation, shifts, shear and flips, etc. An augmented image generator can be easily created using <u>ImageDataGenerator</u> API in Keras. <code>ImageDataGenerator</code> generates batches of image data with real-time data augmentation. The most basic codes to create and configure <code>ImageDataGenerator</code> and train deep neural network with augmented images are as follows.
 
+<pre><code>
+'''this is the augmentation configuration we will use for training'''
+train_datagen = ImageDataGenerator(
+    rescale=1. / 255,
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True)
+'''this is the augmentation configuration we will use for testing: only rescaling'''
+test_datagen = ImageDataGenerator(rescale=1. / 255)
+train_generator = train_datagen.flow_from_directory(
+    train_data_dir,
+    target_size=(img_width, img_height),
+    batch_size=batch_size,
+    class_mode='categorical')
+validation_generator = test_datagen.flow_from_directory(
+    validation_data_dir,
+    target_size=(img_width, img_height),
+    batch_size=batch_size,
+    class_mode='categorical')
+</code></pre>
 
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
+<center><em>Labelling each image to their respective classes</em></center>
 
 ## Stage 3: Building a Convolutional Neural Network
 With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. These are the basic neural network layers used in this project:
 
+<center><img src="/images/CNN.png" height="150" width="700"></center>
+<center><em>Convolutional Neural Network</em></center>
 
 <blockquote>  Convolutional: This layer will compute the output of neurons that are connected to local regions in the input, each computing a dot product between their weights and a small region they are connected to in the input volume. This may result in volume such as [32x32x64] if we decided to use 64 filters</blockquote>
 
-<center><img src="/images/CNN.png" height="150" width="700"></center>
+<center><img src="/images/cl.jpeg" height="150" width="700"></center>
+<center><em>A ConvNet arranges its neurons in three dimensions (width, height, depth), as visualized in one of the layers. Every layer of a ConvNet transforms the 3D input volume to a 3D output volume of neuron activations. In this example, the red input layer holds the image, so its width and height would be the dimensions of the image, and the depth would be 3 (Red, Green, Blue channels)</em></center>
 
 <blockquote>  Activation: The layer which consist of the activation function which determines what output a node will generate base upon its input</blockquote>
 
@@ -214,22 +242,22 @@ We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function w
 <blockquote>  Max-pooling: Layer which takes the largest value from one patch of an image, places it in a new matrix next to the max values from other patches, and discards the rest of the information contained in the activation maps from the activation layer.  </blockquote>
 
 <center><img src="/images/dropout.jpg" height="300" width="750"></center>
+<center><em>(Left) Neural Networks before and after dropouts. (Right) Probability of neuron kept active before and after dropout.</em></center>
 
 <blockquote>  Dropout: The layer where it regularizes the parameters within the network. During training, dropout is implemented by only keeping a neuron active with some probability p (a hyper-parameter), or setting it to zero otherwise.</blockquote>
 
 <center><img src="/images/final_model.jpg" height="340" width="700"></center>
-
+<center><em> 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. The activation function of 'relu' function except the last layer is the 'softmax' function. </em></center>
 ## Stage 4: Testing the model
 <center><img src="/images/results.png" height="450" width="600"></center>
 <center><img src="/images/summary.png" height="280" width="700"></center>
-
+<center><em> The final results of the model</em></center>
 Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
 
 ## Conclusion
 There are 3 main things about this project. Quality of data set. Image augmentation and 
 
 ## Future project
-
 ### Expand dataset
 
 ### Web app
