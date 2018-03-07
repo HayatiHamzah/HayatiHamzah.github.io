@@ -203,7 +203,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 
 We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function will apply an elementwise activation function, such as the max(0,X) thresholding at zero. This leaves the size of the volume unchanged ([32x32x12]). 'Softmax' function is an extension of the sigmoid function to the multiclass case.
 
-<center><img src="/images/maxpool.png" height="350" width="700"></center>
+<center><img src="/images/maxpool.png" height="300" width="600"></center>
 
 <blockquote>  Max-pooling: Layer which takes the largest value from one patch of an image, places it in a new matrix next to the max values from other patches, and discards the rest of the information contained in the activation maps from the activation layer.  </blockquote>
 
@@ -214,6 +214,9 @@ We've selected the 'Relu'  and 'Softmax' activation functions. 'RELU' function w
 <center><img src="/images/final_model.jpg" height="280" width="700"></center>
 
 ## Stage 4: Testing the model
+<center><img src="/images/results.png" height="280" width="700"></center>
+<center><img src="/images/summary.png" height="280" width="700"></center>
+
 Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
 
 ## Conclusion
