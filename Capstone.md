@@ -74,7 +74,6 @@ The dataset used in this classifier was collected from Google Images using perso
 </ul>
 
 ## Stage 0:Scraping Images
-<h2>Preformatted</h2>
 <pre><code>
 '''The handbag brands are stored in a csv files'''
 bags=pd.read_csv("./bag.csv")
@@ -112,11 +111,35 @@ print("adding %s to folder" %(img))
 ## Stage 1:Pre-processing
 
 ### Setup
+<pre><code>
+import os,cv2
+import itertools
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import classification_report,confusion_matrix
+
+import keras
+from keras import backend as K
+from keras import optimizers,applications
+from keras.engine.topology import Input
+from keras.utils import to_categorical, np_utils
+from keras.models import load_model
+from keras.models import Sequential, load_model
+from keras.preprocessing.image import ImageDataGenerator
+from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+</code></pre>
 #### Manual clean-up of dataset
+<center><img src="/images/manual_review.png" height="400" width="400"></center>
+
 #### Image Augmentation
+<center><img src="/images/augmentation.png" height="400" width="400"></center>
+
 #### Labelling of brands
+<center><img src="/images/label.jpg" height="400" width="400"></center>
 
 ## Stage 2: Splitting dataset
+
 ## Stage 3: Building a Convolutional Neural Network
 With the completion of the pre-processing and spliting of our dataset, we can start building our neural network. The most successful neural network for this project has 3 stacks of doubled-layered convolutional layers with 2x2 maxpooling layer at the end of each stack. Before, we further explore different types of neural networks, we must understand some basic neural network techniques used in this project. 
 
@@ -125,6 +148,7 @@ With the completion of the pre-processing and spliting of our dataset, we can st
 <blockquote>  Dropout:  </blockquote>
 <blockquote>  Soft-max:  </blockquote>
 
+<center><img src="/images/final_model.jpg" height="400" width="400"></center>
 
 ## Results 
 Once we attain our trained neural network, we can test it out on a brand-new dataset! The model manage to interpret 50 handbag images and got an accuracy of 96% (48/50). 
