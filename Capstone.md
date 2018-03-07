@@ -55,7 +55,8 @@ They use <u>neural networks</u>
 
 <strong>Why is Convolutional Neural Network applicable for image?</strong>
 
-[insert cnn image]
+<center><img src="/images/CNNA.jpg" height="200" width="700"></center>
+<center><em>Convolutional Neural Network Architecture</em></center>
 The convolutional neural networks make a conscious tradeoff: if a network is designed for specifically handling the images, some generalizability has to be sacrificed for a much more feasible solution.
 
 If you consider any image, proximity has a strong relation with similarity in it and convolutional neural networks specifically take advantage of this fact. This implies, in a given image, two pixels that are nearer to each other are more likely to be related than the two pixels that are apart from each other. Nevertheless, in a usual neural network, every pixel is linked to every single neuron. The added computational load makes the network less accurate in this case.
