@@ -191,29 +191,27 @@ In order to make the most of our few training examples, we will "augment" them v
 <center><em>An example how the image can be shift around during training</em></center>
 Image augmentation artificially creates training images through different ways of processing or combination of multiple processing, such as random rotation, shifts, shear and flips, etc. An augmented image generator can be easily created using <u>ImageDataGenerator</u> API in Keras. <code>ImageDataGenerator</code> generates batches of image data with real-time data augmentation. The most basic codes to create and configure <code>ImageDataGenerator</code> and train deep neural network with augmented images are as follows.
 
-<code>
- # this is the augmentation configuration we will use for training
+<pre><code>
+'''this is the augmentation configuration we will use for training'''
 train_datagen = ImageDataGenerator(
     rescale=1. / 255,
     shear_range=0.2,
     zoom_range=0.2,
     horizontal_flip=True)
-# this is the augmentation configuration we will use for testing:
-# only rescaling
+'''this is the augmentation configuration we will use for testing: only rescaling'''
 test_datagen = ImageDataGenerator(rescale=1. / 255)
-
 train_generator = train_datagen.flow_from_directory(
     train_data_dir,
     target_size=(img_width, img_height),
     batch_size=batch_size,
     class_mode='categorical')
-    
 validation_generator = test_datagen.flow_from_directory(
     validation_data_dir,
     target_size=(img_width, img_height),
     batch_size=batch_size,
     class_mode='categorical')
-</code>
+</code></pre>
+
 #### Labelling of brands
 <center><img src="/images/label.jpg" height="350" width="500"></center>
 <center><em>Labelling each image to their respective classes</em></center>
