@@ -1,11 +1,7 @@
----
-layout: post
-title:  "Exploratory Data Analysis"
-date:   2017-11-30
-excerpt: "This project focused on exploratory data analysis based on SAT scores and drug use dataset. Exploratory Data Analysis also known as 'EDA' which is vital to the data science pipeline."
-image: "/images/eda.jpg"
-permalink: /Project 1/
----
+
+<img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 15px; height: 80px">
+
+# Project 2
 
 ### Exploratory Data Analysis (EDA)
 
@@ -737,15 +733,15 @@ sns.distplot(verbal, bins= 50, kde=False)
 plt.show()
 ```
 
-<center><img src="/Project2_SAT_EDA/output_24_0.png" height="380" width="420"></center>
+
 ![png](output_24_0.png)
 
 
-<center><img src="/Project2_SAT_EDA/output_24_1.png" height="380" width="420"></center>
+
 ![png](output_24_1.png)
 
 
-<center><img src="/Project2_SAT_EDA/output_24_2.png" height="380" width="420"></center>
+
 ![png](output_24_2.png)
 
 
