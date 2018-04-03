@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+---
+layout: post
+title:  "Exploratory Data Analysis"
+date:   2017-11-30
+excerpt: "Basic exploration of data is the bread and butter of any data scientist"
+image: "/images/eda.jpg"
+permalink: /Project 1/
+
+---
 
 <img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 15px; height: 80px">
 
