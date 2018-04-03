@@ -5,7 +5,7 @@ description: All about asking the right questions and coding out effective solut
 ---
 ## About me
 
-<span class="image left"><img src="{{ "/images/pic04.jpg" | absolute_url }}" alt="" /></span>
+<span class="image left"><img src="{{ "/images/Hayati.jpg" | absolute_url }}" alt="" /></span>
 
 Hello, I am Hayati from tropical Singapore. 
 
