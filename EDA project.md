@@ -2,8 +2,8 @@
 layout: post
 title:  "Exploratory Data Analysis"
 date:   2017-11-30
-excerpt: "One of Data Science key purpose is to model and predict trends. With the Ames housing dataset, regression modelling and classification are able to utilise."
-image: "/images/eda2.jpg"
+excerpt: "Basic exploration of data is the bread and butter of any data scientist"
+image: "/images/eda.jpg"
 permalink: /Project 1/
 
 ---
