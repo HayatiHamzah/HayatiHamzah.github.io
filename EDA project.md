@@ -67,6 +67,7 @@ image: "/images/eda.jpg"
 permalink: /Project 1/
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
  "cells": [
   {
@@ -1597,6 +1598,8 @@ sats.head()
       "37.0 27.27923867605359\n"
      ]
 =======
+=======
+>>>>>>> parent of 58508c9... Update
 
 ### Exploratory Data Analysis (EDA)
 
@@ -1651,6 +1654,9 @@ Toy example:
 data = {
     'column1':[0,1,2,3],
     'column2':['a','b','c','d']
+<<<<<<< HEAD
+>>>>>>> parent of 58508c9... Update
+=======
 >>>>>>> parent of 58508c9... Update
     }
 ```
@@ -2566,6 +2572,8 @@ sats.head()
 <style>
     .dataframe thead tr:only-child th {
         text-align: right;
+<<<<<<< HEAD
+=======
     }
 
     .dataframe thead th {
@@ -2772,6 +2780,2365 @@ sats.loc[sats['Verbal'] > verbal_mean]
 
     .dataframe thead th {
         text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Rate</th>
+      <th>Verbal</th>
+      <th>Math</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>26</th>
+      <td>CO</td>
+      <td>31</td>
+      <td>539</td>
+      <td>542</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>OH</td>
+      <td>26</td>
+      <td>534</td>
+      <td>439</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>MT</td>
+      <td>23</td>
+      <td>539</td>
+      <td>539</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>ID</td>
+      <td>17</td>
+      <td>543</td>
+      <td>542</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>TN</td>
+      <td>13</td>
+      <td>562</td>
+      <td>553</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>NM</td>
+      <td>13</td>
+      <td>551</td>
+      <td>542</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>IL</td>
+      <td>12</td>
+      <td>576</td>
+      <td>589</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>KY</td>
+      <td>12</td>
+      <td>550</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>WY</td>
+      <td>11</td>
+      <td>547</td>
+      <td>545</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>MI</td>
+      <td>11</td>
+      <td>561</td>
+      <td>572</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>MN</td>
+      <td>9</td>
+      <td>580</td>
+      <td>589</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>KS</td>
+      <td>9</td>
+      <td>577</td>
+      <td>580</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>AL</td>
+      <td>9</td>
+      <td>559</td>
+      <td>554</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>NE</td>
+      <td>8</td>
+      <td>562</td>
+      <td>568</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>OK</td>
+      <td>8</td>
+      <td>567</td>
+      <td>561</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>MO</td>
+      <td>8</td>
+      <td>577</td>
+      <td>577</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>LA</td>
+      <td>7</td>
+      <td>564</td>
+      <td>562</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>WI</td>
+      <td>6</td>
+      <td>584</td>
+      <td>596</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>AR</td>
+      <td>6</td>
+      <td>562</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>UT</td>
+      <td>5</td>
+      <td>575</td>
+      <td>570</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>IA</td>
+      <td>5</td>
+      <td>593</td>
+      <td>603</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>SD</td>
+      <td>4</td>
+      <td>577</td>
+      <td>582</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>ND</td>
+      <td>4</td>
+      <td>592</td>
+      <td>599</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>MS</td>
+      <td>4</td>
+      <td>566</td>
+      <td>551</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+sats.loc[sats['Verbal'] > verbal_mean].count()
+```
+
+
+
+
+    State     24
+    Rate      24
+    Verbal    24
+    Math      24
+    dtype: int64
+
+
+
+## There are a total of 24 states that above the mean score of the verbal test. Therefore, the distribution is considerably normally distributed.
+
+### 5.2 Find the list of states that have `Verbal` scores greater than the median of `Verbal` scores across states
+
+How does this compare to the list of states greater than the mean of `Verbal` scores? Why?
+
+
+```python
+verbal_median = sats['Verbal'].median() 
+print verbal_median
+sats[sats['Verbal'] > verbal_median]
+
+
+
+```
+
+    527.0
+
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Rate</th>
+      <th>Verbal</th>
+      <th>Math</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>26</th>
+      <td>CO</td>
+      <td>31</td>
+      <td>539</td>
+      <td>542</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>OH</td>
+      <td>26</td>
+      <td>534</td>
+      <td>439</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>MT</td>
+      <td>23</td>
+      <td>539</td>
+      <td>539</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>ID</td>
+      <td>17</td>
+      <td>543</td>
+      <td>542</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>TN</td>
+      <td>13</td>
+      <td>562</td>
+      <td>553</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>NM</td>
+      <td>13</td>
+      <td>551</td>
+      <td>542</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>IL</td>
+      <td>12</td>
+      <td>576</td>
+      <td>589</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>KY</td>
+      <td>12</td>
+      <td>550</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>WY</td>
+      <td>11</td>
+      <td>547</td>
+      <td>545</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>MI</td>
+      <td>11</td>
+      <td>561</td>
+      <td>572</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>MN</td>
+      <td>9</td>
+      <td>580</td>
+      <td>589</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>KS</td>
+      <td>9</td>
+      <td>577</td>
+      <td>580</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>AL</td>
+      <td>9</td>
+      <td>559</td>
+      <td>554</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>NE</td>
+      <td>8</td>
+      <td>562</td>
+      <td>568</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>OK</td>
+      <td>8</td>
+      <td>567</td>
+      <td>561</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>MO</td>
+      <td>8</td>
+      <td>577</td>
+      <td>577</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>LA</td>
+      <td>7</td>
+      <td>564</td>
+      <td>562</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>WI</td>
+      <td>6</td>
+      <td>584</td>
+      <td>596</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>AR</td>
+      <td>6</td>
+      <td>562</td>
+      <td>550</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>UT</td>
+      <td>5</td>
+      <td>575</td>
+      <td>570</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>IA</td>
+      <td>5</td>
+      <td>593</td>
+      <td>603</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>SD</td>
+      <td>4</td>
+      <td>577</td>
+      <td>582</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>ND</td>
+      <td>4</td>
+      <td>592</td>
+      <td>599</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>MS</td>
+      <td>4</td>
+      <td>566</td>
+      <td>551</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+sats[sats['Verbal'] > verbal_median].count()
+```
+
+
+
+
+    State     24
+    Rate      24
+    Verbal    24
+    Math      24
+    dtype: int64
+
+
+
+## There are a total of 24 states that above the median score of the verbal test. It is similar to list of state which are above the mean score of the verbal test. This is so as the distribution of the scores are normally distributed.
+
+### 5.3 Create a column that is the difference between the `Verbal` and `Math` scores
+
+Specifically, this should be `Verbal - Math`.
+
+
+```python
+sats['diff_verbal_math'] = sats['Verbal'] - sats['Math']
+sats.head(5)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Rate</th>
+      <th>Verbal</th>
+      <th>Math</th>
+      <th>diff_verbal_math</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CT</td>
+      <td>82</td>
+      <td>509</td>
+      <td>510</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NJ</td>
+      <td>81</td>
+      <td>499</td>
+      <td>513</td>
+      <td>-14</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MA</td>
+      <td>79</td>
+      <td>511</td>
+      <td>515</td>
+      <td>-4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NY</td>
+      <td>77</td>
+      <td>495</td>
+      <td>505</td>
+      <td>-10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NH</td>
+      <td>72</td>
+      <td>520</td>
+      <td>516</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+### 5.4 Create two new DataFrames showing states with the greatest difference between scores
+
+1. Your first DataFrame should be the 10 states with the greatest gap between `Verbal` and `Math` scores where `Verbal` is greater than `Math`. It should be sorted appropriately to show the ranking of states.
+2. Your second DataFrame will be the inverse: states with the greatest gap between `Verbal` and `Math` such that `Math` is greater than `Verbal`. Again, this should be sorted appropriately to show rank.
+3. Print the header of both variables, only showing the top 3 states in each.
+
+#### Question 5.4.1 and 5.4.3(A)
+
+
+```python
+state_diff_score = sats[['State','diff_verbal_math']]
+top_3_verbal = state_diff_score.sort_values('diff_verbal_math').head(9)
+print 'The states is ' + top_3_verbal.State.head(3)
+```
+
+    21    The states is HI
+    23    The states is CA
+    1     The states is NJ
+    Name: State, dtype: object
+
+
+#### Question 5.4.2
+
+
+
+```python
+top_3_math = state_diff_score.sort_values('diff_verbal_math').tail(9)
+print 'The state is ' +  top_3_math.State.head(3)
+```
+
+    41    The state is OK
+    16    The state is DC
+    32    The state is NM
+    Name: State, dtype: object
+
+
+## 6. Examine summary statistics
+
+---
+
+Checking the summary statistics for data is an essential step in the EDA process!
+
+<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+### 6.1 Create the correlation matrix of your variables (excluding `State`).
+
+What does the correlation matrix tell you?
+
+
+
+```python
+# Create dataframe to analyse the different factors on a heat map
+features = sats[['Math','Verbal', 'Rate']]
+```
+
+
+```python
+# create correlation data
+correlation = features.corr()
+
+# plot heatmap
+ax = sns.heatmap(correlation, annot=True)
+
+# turn the axis label
+for item in ax.get_yticklabels():
+    item.set_rotation(0)
+
+for item in ax.get_xticklabels():
+    item.set_rotation(90)
+```
+
+
+![png](output_68_0.png)
+
+
+#### Based on the absolute value of the pearson correlation value, we observe high correlation between two sets of groups: Verbal and Maths scores (0.9) and, Verbal scores and Rate of passes(-0.89). This implies that candidates with high verbal scores are highly likely in attain high maths scores. Whereas, candidates with high verbal scores are highly likely to attain a low rate or vice versa.
+
+<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+### 6.2 Use pandas'  `.describe()` built-in function on your DataFrame
+
+Write up what each of the rows returned by the function indicate.
+
+
+```python
+math.describe()
+```
+
+
+
+
+    count     51.000000
+    mean     531.843137
+    std       36.287393
+    min      439.000000
+    25%      503.000000
+    50%      525.000000
+    75%      557.500000
+    max      603.000000
+    Name: Math, dtype: float64
+
+
+
+#### Based on the data of the 50 states, we observe that the mean math score of the country is 532 with a minimum score of 439 and maximum score of 603.Those in the upper percentile will score more than 558.
+
+
+```python
+verbal.describe()
+```
+
+
+
+
+    count     51.000000
+    mean     532.529412
+    std       33.360667
+    min      482.000000
+    25%      501.000000
+    50%      527.000000
+    75%      562.000000
+    max      593.000000
+    Name: Verbal, dtype: float64
+
+
+
+#### Based on the data of the 50 states, we observe that the mean verbal score of the country is 533 with a minimum score of 482 and maximum score of 593. Those in the upper percentile will score more than 593.
+
+
+```python
+rate.describe()
+```
+
+
+
+
+    count    51.000000
+    mean     37.000000
+    std      27.550681
+    min       4.000000
+    25%       9.000000
+    50%      33.000000
+    75%      64.000000
+    max      82.000000
+    Name: Rate, dtype: float64
+
+
+
+#### Based on the data of the 50 states, we observe that the mean rate of the country is 37 with a minimum rate of 4 and maximum score of 82. Those in the upper percentile will rate more than 64.
+
+<img src="http://imgur.com/xDpSobf.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+### 6.3 Assign and print the _covariance_ matrix for the dataset
+
+1. Describe how the covariance matrix is different from the correlation matrix.
+2. What is the process to convert the covariance into the correlation?
+3. Why is the correlation matrix preferred to the covariance matrix for examining relationships in your data?
+
+## 6.3.1 & 6.3.2
+The covariance matrix indicates "relatedness" between variables. It is literally the sum of deviations from the mean of  X times deviations from the mean of  Y adjusted by the sample size  N.
+### $$ \text{covariance}(X, Y) = \sum_{i=1}^N \frac{(X - \bar{X})(Y - \bar{Y})}{N}$$
+From the formula above, it is challenging in deducing what the value means as X and Y might have different units.
+Therefore, we rely on the correlation matrix helps normalise the covariance by dividing it with the standard deviation:
+### $$ \text{pearson correlation}\;r = cor(X, Y) =\frac{cov(X, Y)}{std(X)std(Y)}$$
+The correlation matrix allows us to easily interprete the "relatedness" on a scale of -1 to 1 as it takes the diversity of the data into account.
+
+## 6.3.3
+
+
+The correlation matrix is much more effective in assessing the the relationship between the two different variables as it the deviations of both variables will be taken into account. 
+
+
+```python
+covariance = features.cov()
+print covariance
+```
+
+                   Math       Verbal    Rate
+    Math    1316.774902  1089.404706 -773.22
+    Verbal  1089.404706  1112.934118 -816.28
+    Rate    -773.220000  -816.280000  759.04
+
+
+<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+## 7. Performing EDA on "drug use by age" data.
+
+---
+
+You will now switch datasets to one with many more variables. This section of the project is more open-ended - use the techniques you practiced above!
+
+We'll work with the "drug-use-by-age.csv" data, sourced from and described here: https://github.com/fivethirtyeight/data/tree/master/drug-use-by-age.
+
+### 7.1
+
+Load the data using pandas. Does this data require cleaning? Are variables missing? How will this affect your approach to EDA on the data?
+
+
+```python
+#Load the data using pandas
+drug = pd.read_csv('drug-use-by-age.csv', na_values='-')
+drug
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>n</th>
+      <th>alcohol-use</th>
+      <th>alcohol-frequency</th>
+      <th>marijuana-use</th>
+      <th>marijuana-frequency</th>
+      <th>cocaine-use</th>
+      <th>cocaine-frequency</th>
+      <th>crack-use</th>
+      <th>crack-frequency</th>
+      <th>...</th>
+      <th>oxycontin-use</th>
+      <th>oxycontin-frequency</th>
+      <th>tranquilizer-use</th>
+      <th>tranquilizer-frequency</th>
+      <th>stimulant-use</th>
+      <th>stimulant-frequency</th>
+      <th>meth-use</th>
+      <th>meth-frequency</th>
+      <th>sedative-use</th>
+      <th>sedative-frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12</td>
+      <td>2798</td>
+      <td>3.9</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>24.5</td>
+      <td>0.2</td>
+      <td>52.0</td>
+      <td>0.2</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.2</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13</td>
+      <td>2757</td>
+      <td>8.5</td>
+      <td>6.0</td>
+      <td>3.4</td>
+      <td>15.0</td>
+      <td>0.1</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>41.0</td>
+      <td>0.3</td>
+      <td>25.5</td>
+      <td>0.3</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.1</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>14</td>
+      <td>2792</td>
+      <td>18.1</td>
+      <td>5.0</td>
+      <td>8.7</td>
+      <td>24.0</td>
+      <td>0.1</td>
+      <td>5.5</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.4</td>
+      <td>4.5</td>
+      <td>0.9</td>
+      <td>5.0</td>
+      <td>0.8</td>
+      <td>12.0</td>
+      <td>0.1</td>
+      <td>24.0</td>
+      <td>0.2</td>
+      <td>16.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>15</td>
+      <td>2956</td>
+      <td>29.2</td>
+      <td>6.0</td>
+      <td>14.5</td>
+      <td>25.0</td>
+      <td>0.5</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>9.5</td>
+      <td>...</td>
+      <td>0.8</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.5</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>0.3</td>
+      <td>10.5</td>
+      <td>0.4</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16</td>
+      <td>3058</td>
+      <td>40.1</td>
+      <td>10.0</td>
+      <td>22.5</td>
+      <td>30.0</td>
+      <td>1.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.1</td>
+      <td>4.0</td>
+      <td>2.4</td>
+      <td>11.0</td>
+      <td>1.8</td>
+      <td>9.5</td>
+      <td>0.3</td>
+      <td>36.0</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>17</td>
+      <td>3038</td>
+      <td>49.3</td>
+      <td>13.0</td>
+      <td>28.0</td>
+      <td>36.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>0.1</td>
+      <td>21.0</td>
+      <td>...</td>
+      <td>1.4</td>
+      <td>6.0</td>
+      <td>3.5</td>
+      <td>7.0</td>
+      <td>2.8</td>
+      <td>9.0</td>
+      <td>0.6</td>
+      <td>48.0</td>
+      <td>0.5</td>
+      <td>6.5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>18</td>
+      <td>2469</td>
+      <td>58.7</td>
+      <td>24.0</td>
+      <td>33.7</td>
+      <td>52.0</td>
+      <td>3.2</td>
+      <td>5.0</td>
+      <td>0.4</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>1.7</td>
+      <td>7.0</td>
+      <td>4.9</td>
+      <td>12.0</td>
+      <td>3.0</td>
+      <td>8.0</td>
+      <td>0.5</td>
+      <td>12.0</td>
+      <td>0.4</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>19</td>
+      <td>2223</td>
+      <td>64.6</td>
+      <td>36.0</td>
+      <td>33.4</td>
+      <td>60.0</td>
+      <td>4.1</td>
+      <td>5.5</td>
+      <td>0.5</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>1.5</td>
+      <td>7.5</td>
+      <td>4.2</td>
+      <td>4.5</td>
+      <td>3.3</td>
+      <td>6.0</td>
+      <td>0.4</td>
+      <td>105.0</td>
+      <td>0.3</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>20</td>
+      <td>2271</td>
+      <td>69.7</td>
+      <td>48.0</td>
+      <td>34.0</td>
+      <td>60.0</td>
+      <td>4.9</td>
+      <td>8.0</td>
+      <td>0.6</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>1.7</td>
+      <td>12.0</td>
+      <td>5.4</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>12.0</td>
+      <td>0.9</td>
+      <td>12.0</td>
+      <td>0.5</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>21</td>
+      <td>2354</td>
+      <td>83.2</td>
+      <td>52.0</td>
+      <td>33.0</td>
+      <td>52.0</td>
+      <td>4.8</td>
+      <td>5.0</td>
+      <td>0.5</td>
+      <td>17.0</td>
+      <td>...</td>
+      <td>1.3</td>
+      <td>13.5</td>
+      <td>3.9</td>
+      <td>7.0</td>
+      <td>4.1</td>
+      <td>10.0</td>
+      <td>0.6</td>
+      <td>2.0</td>
+      <td>0.3</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>22-23</td>
+      <td>4707</td>
+      <td>84.2</td>
+      <td>52.0</td>
+      <td>28.4</td>
+      <td>52.0</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>0.5</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>1.7</td>
+      <td>17.5</td>
+      <td>4.4</td>
+      <td>12.0</td>
+      <td>3.6</td>
+      <td>10.0</td>
+      <td>0.6</td>
+      <td>46.0</td>
+      <td>0.2</td>
+      <td>52.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>24-25</td>
+      <td>4591</td>
+      <td>83.1</td>
+      <td>52.0</td>
+      <td>24.9</td>
+      <td>60.0</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>0.5</td>
+      <td>6.0</td>
+      <td>...</td>
+      <td>1.3</td>
+      <td>20.0</td>
+      <td>4.3</td>
+      <td>10.0</td>
+      <td>2.6</td>
+      <td>10.0</td>
+      <td>0.7</td>
+      <td>21.0</td>
+      <td>0.2</td>
+      <td>17.5</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>26-29</td>
+      <td>2628</td>
+      <td>80.7</td>
+      <td>52.0</td>
+      <td>20.8</td>
+      <td>52.0</td>
+      <td>3.2</td>
+      <td>5.0</td>
+      <td>0.4</td>
+      <td>6.0</td>
+      <td>...</td>
+      <td>1.2</td>
+      <td>13.5</td>
+      <td>4.2</td>
+      <td>10.0</td>
+      <td>2.3</td>
+      <td>7.0</td>
+      <td>0.6</td>
+      <td>30.0</td>
+      <td>0.4</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>30-34</td>
+      <td>2864</td>
+      <td>77.5</td>
+      <td>52.0</td>
+      <td>16.4</td>
+      <td>72.0</td>
+      <td>2.1</td>
+      <td>8.0</td>
+      <td>0.5</td>
+      <td>15.0</td>
+      <td>...</td>
+      <td>0.9</td>
+      <td>46.0</td>
+      <td>3.6</td>
+      <td>8.0</td>
+      <td>1.4</td>
+      <td>12.0</td>
+      <td>0.4</td>
+      <td>54.0</td>
+      <td>0.4</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>35-49</td>
+      <td>7391</td>
+      <td>75.0</td>
+      <td>52.0</td>
+      <td>10.4</td>
+      <td>48.0</td>
+      <td>1.5</td>
+      <td>15.0</td>
+      <td>0.5</td>
+      <td>48.0</td>
+      <td>...</td>
+      <td>0.3</td>
+      <td>12.0</td>
+      <td>1.9</td>
+      <td>6.0</td>
+      <td>0.6</td>
+      <td>24.0</td>
+      <td>0.2</td>
+      <td>104.0</td>
+      <td>0.3</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>50-64</td>
+      <td>3923</td>
+      <td>67.2</td>
+      <td>52.0</td>
+      <td>7.3</td>
+      <td>52.0</td>
+      <td>0.9</td>
+      <td>36.0</td>
+      <td>0.4</td>
+      <td>62.0</td>
+      <td>...</td>
+      <td>0.4</td>
+      <td>5.0</td>
+      <td>1.4</td>
+      <td>10.0</td>
+      <td>0.3</td>
+      <td>24.0</td>
+      <td>0.2</td>
+      <td>30.0</td>
+      <td>0.2</td>
+      <td>104.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>65+</td>
+      <td>2448</td>
+      <td>49.3</td>
+      <td>52.0</td>
+      <td>1.2</td>
+      <td>36.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.2</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>364.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>15.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>17 rows × 28 columns</p>
+</div>
+
+
+
+### Data quality check :
+### 1) No null values 
+### 2) Check Columns labels 
+### 3) Check dtypes of the columns
+
+
+
+```python
+# Ensure that there are no null values
+drug.isnull().sum()
+```
+
+
+
+
+    age                        0
+    n                          0
+    alcohol-use                0
+    alcohol-frequency          0
+    marijuana-use              0
+    marijuana-frequency        0
+    cocaine-use                0
+    cocaine-frequency          1
+    crack-use                  0
+    crack-frequency            3
+    heroin-use                 0
+    heroin-frequency           1
+    hallucinogen-use           0
+    hallucinogen-frequency     0
+    inhalant-use               0
+    inhalant-frequency         1
+    pain-releiver-use          0
+    pain-releiver-frequency    0
+    oxycontin-use              0
+    oxycontin-frequency        1
+    tranquilizer-use           0
+    tranquilizer-frequency     0
+    stimulant-use              0
+    stimulant-frequency        0
+    meth-use                   0
+    meth-frequency             2
+    sedative-use               0
+    sedative-frequency         0
+    dtype: int64
+
+
+
+#### We can observe that there are null values in the EDA data set under cocaine frequency, crack frequency, heroin frequency, inhalant frequency, oxycontin frequency.
+
+
+```python
+drug.fillna(0, inplace=True)
+```
+
+
+```python
+drug.isnull().sum()
+```
+
+
+
+
+    age                        0
+    n                          0
+    alcohol-use                0
+    alcohol-frequency          0
+    marijuana-use              0
+    marijuana-frequency        0
+    cocaine-use                0
+    cocaine-frequency          0
+    crack-use                  0
+    crack-frequency            0
+    heroin-use                 0
+    heroin-frequency           0
+    hallucinogen-use           0
+    hallucinogen-frequency     0
+    inhalant-use               0
+    inhalant-frequency         0
+    pain-releiver-use          0
+    pain-releiver-frequency    0
+    oxycontin-use              0
+    oxycontin-frequency        0
+    tranquilizer-use           0
+    tranquilizer-frequency     0
+    stimulant-use              0
+    stimulant-frequency        0
+    meth-use                   0
+    meth-frequency             0
+    sedative-use               0
+    sedative-frequency         0
+    dtype: int64
+
+
+
+
+```python
+drug.columns
+```
+
+
+
+
+    Index([u'age', u'n', u'alcohol-use', u'alcohol-frequency', u'marijuana-use',
+           u'marijuana-frequency', u'cocaine-use', u'cocaine-frequency',
+           u'crack-use', u'crack-frequency', u'heroin-use', u'heroin-frequency',
+           u'hallucinogen-use', u'hallucinogen-frequency', u'inhalant-use',
+           u'inhalant-frequency', u'pain-releiver-use', u'pain-releiver-frequency',
+           u'oxycontin-use', u'oxycontin-frequency', u'tranquilizer-use',
+           u'tranquilizer-frequency', u'stimulant-use', u'stimulant-frequency',
+           u'meth-use', u'meth-frequency', u'sedative-use', u'sedative-frequency'],
+          dtype='object')
+
+
+
+#### We replace the '-' in the columns of the drug dataframe as it would be perceived as the subtraction arithmetic operation when we cast a method. Therefore, it would be replace with a '_'. From the columns names above, we can observe that 'pain-releiver' and 'oxycontin' is spelled wrongly. 
+
+
+```python
+# List Replacement Method
+new_names = ['age', 'n','alcohol_use', 'alcohol_frequency', 'marijuana_use',
+        'marijuana_frequency', 'cocaine_use', 'cocaine_frequency',
+        'crack_use', 'crack_frequency', 'heroin_use', 'heroin_frequency',
+        'hallucinogen_use', 'hallucinogen_frequency', 'inhalant_use',
+        'inhalant_frequency', 'painrelieve_use', 'painrelieve_frequency',
+        'oxycontin_use', 'oxycontin_frequency', 'tranquilizer_use',
+        'tranquilizer-frequency', 'stimulant_use', 'stimulant_frequency',
+        'meth_use', 'meth_frequency', 'sedative_use', 'sedative_frequency']
+drug.columns = new_names
+drug.head()
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>n</th>
+      <th>alcohol_use</th>
+      <th>alcohol_frequency</th>
+      <th>marijuana_use</th>
+      <th>marijuana_frequency</th>
+      <th>cocaine_use</th>
+      <th>cocaine_frequency</th>
+      <th>crack_use</th>
+      <th>crack_frequency</th>
+      <th>...</th>
+      <th>oxycontin_use</th>
+      <th>oxycontin_frequency</th>
+      <th>tranquilizer_use</th>
+      <th>tranquilizer-frequency</th>
+      <th>stimulant_use</th>
+      <th>stimulant_frequency</th>
+      <th>meth_use</th>
+      <th>meth_frequency</th>
+      <th>sedative_use</th>
+      <th>sedative_frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12</td>
+      <td>2798</td>
+      <td>3.9</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>24.5</td>
+      <td>0.2</td>
+      <td>52.0</td>
+      <td>0.2</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.2</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13</td>
+      <td>2757</td>
+      <td>8.5</td>
+      <td>6.0</td>
+      <td>3.4</td>
+      <td>15.0</td>
+      <td>0.1</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>41.0</td>
+      <td>0.3</td>
+      <td>25.5</td>
+      <td>0.3</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.1</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>14</td>
+      <td>2792</td>
+      <td>18.1</td>
+      <td>5.0</td>
+      <td>8.7</td>
+      <td>24.0</td>
+      <td>0.1</td>
+      <td>5.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.4</td>
+      <td>4.5</td>
+      <td>0.9</td>
+      <td>5.0</td>
+      <td>0.8</td>
+      <td>12.0</td>
+      <td>0.1</td>
+      <td>24.0</td>
+      <td>0.2</td>
+      <td>16.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>15</td>
+      <td>2956</td>
+      <td>29.2</td>
+      <td>6.0</td>
+      <td>14.5</td>
+      <td>25.0</td>
+      <td>0.5</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>9.5</td>
+      <td>...</td>
+      <td>0.8</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>4.5</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>0.3</td>
+      <td>10.5</td>
+      <td>0.4</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16</td>
+      <td>3058</td>
+      <td>40.1</td>
+      <td>10.0</td>
+      <td>22.5</td>
+      <td>30.0</td>
+      <td>1.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.1</td>
+      <td>4.0</td>
+      <td>2.4</td>
+      <td>11.0</td>
+      <td>1.8</td>
+      <td>9.5</td>
+      <td>0.3</td>
+      <td>36.0</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 28 columns</p>
+</div>
+
+
+
+#### We add a new column at the front of the table to understand the age proportion within the study. This will help us understand the age distribution amongst the various types of drug use.
+
+
+```python
+new_col = (drug['n']/sum(drug['n'])*100)
+idx = 2
+drug.insert(loc=idx, column='age_percentage', value=new_col)
+drug.head(2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>n</th>
+      <th>age_percentage</th>
+      <th>alcohol_use</th>
+      <th>alcohol_frequency</th>
+      <th>marijuana_use</th>
+      <th>marijuana_frequency</th>
+      <th>cocaine_use</th>
+      <th>cocaine_frequency</th>
+      <th>crack_use</th>
+      <th>...</th>
+      <th>oxycontin_use</th>
+      <th>oxycontin_frequency</th>
+      <th>tranquilizer_use</th>
+      <th>tranquilizer-frequency</th>
+      <th>stimulant_use</th>
+      <th>stimulant_frequency</th>
+      <th>meth_use</th>
+      <th>meth_frequency</th>
+      <th>sedative_use</th>
+      <th>sedative_frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12</td>
+      <td>2798</td>
+      <td>5.062604</td>
+      <td>3.9</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>24.5</td>
+      <td>0.2</td>
+      <td>52.0</td>
+      <td>0.2</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>0.2</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13</td>
+      <td>2757</td>
+      <td>4.988420</td>
+      <td>8.5</td>
+      <td>6.0</td>
+      <td>3.4</td>
+      <td>15.0</td>
+      <td>0.1</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>41.0</td>
+      <td>0.3</td>
+      <td>25.5</td>
+      <td>0.3</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.1</td>
+      <td>19.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 29 columns</p>
+</div>
+
+
+
+#### We are going to make a new data set without the age column as some of the age groups and it would be easier to process the data in the other process.
+
+
+```python
+druggie = drug.drop(['age'], axis=1)
+druggie.head(2)
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+>>>>>>> parent of 58508c9... Update
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+<<<<<<< HEAD
+      <th>State</th>
+      <th>Rate</th>
+      <th>Verbal</th>
+      <th>Math</th>
+=======
+      <th>n</th>
+      <th>age_percentage</th>
+      <th>alcohol_use</th>
+      <th>alcohol_frequency</th>
+      <th>marijuana_use</th>
+      <th>marijuana_frequency</th>
+      <th>cocaine_use</th>
+      <th>cocaine_frequency</th>
+      <th>crack_use</th>
+      <th>crack_frequency</th>
+      <th>...</th>
+      <th>oxycontin_use</th>
+      <th>oxycontin_frequency</th>
+      <th>tranquilizer_use</th>
+      <th>tranquilizer-frequency</th>
+      <th>stimulant_use</th>
+      <th>stimulant_frequency</th>
+      <th>meth_use</th>
+      <th>meth_frequency</th>
+      <th>sedative_use</th>
+      <th>sedative_frequency</th>
+>>>>>>> parent of 58508c9... Update
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+<<<<<<< HEAD
+      <td>CT</td>
+      <td>82</td>
+      <td>509</td>
+      <td>510</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NJ</td>
+      <td>81</td>
+      <td>499</td>
+      <td>513</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MA</td>
+      <td>79</td>
+      <td>511</td>
+      <td>515</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NY</td>
+      <td>77</td>
+      <td>495</td>
+      <td>505</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NH</td>
+      <td>72</td>
+      <td>520</td>
+      <td>516</td>
+    </tr>
+  </tbody>
+</table>
+=======
+      <td>2798</td>
+      <td>5.062604</td>
+      <td>3.9</td>
+      <td>3.0</td>
+      <td>1.1</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>24.5</td>
+      <td>0.2</td>
+      <td>52.0</td>
+      <td>0.2</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>0.2</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2757</td>
+      <td>4.988420</td>
+      <td>8.5</td>
+      <td>6.0</td>
+      <td>3.4</td>
+      <td>15.0</td>
+      <td>0.1</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>0.1</td>
+      <td>41.0</td>
+      <td>0.3</td>
+      <td>25.5</td>
+      <td>0.3</td>
+      <td>4.0</td>
+      <td>0.1</td>
+      <td>5.0</td>
+      <td>0.1</td>
+      <td>19.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 28 columns</p>
+>>>>>>> parent of 58508c9... Update
+</div>
+
+
+
+<<<<<<< HEAD
+
+```python
+sats_without_state = sats.drop(['State'],axis=1)
+```
+
+
+```python
+sats_without_state.head()
+=======
+### 7.2 Do a high-level, initial overview of the data
+
+Get a feel for what this dataset is all about.
+
+Use whichever techniques you'd like, including those from the SAT dataset EDA. The final response to this question should be a written description of what you infer about the dataset.
+
+Some things to consider doing:
+
+- Look for relationships between variables and subsets of those variables' values
+- Derive new features from the ones available to help your analysis
+- Visualize everything!
+
+#### To understand the relationships between variables, we will visualise the data in the form of a heat map and boxplot. The box plot is use to identify the outliers whereas the heat map will point us to the more closely related variables. 
+
+#### Before doing so, we must separate the data points into two groups: 1) Drug use and 2) Drug Frequency
+
+
+```python
+# The n column is dropped because do not measure the drug use on a percentage scale. 
+drug_only = drug.drop(['n'], axis=1)
+```
+
+
+```python
+use_drug = list(drug_only.columns[::2])
+use = drug_only[use_drug]
+```
+
+
+```python
+freq_drug = list(drug_only.columns[1::2])
+freq = drug_only[freq_drug]
+```
+
+
+```python
+#Configure the shape of the boxplot
+fig = plt.figure(figsize=(12,8))
+ax = fig.gca()
+
+# Plot the boxplot
+ax = sns.boxplot(data=use, orient='h', ax=ax)
+
+# Add titles and axes labels to the boxplot
+ax.set_title('Different drug use\n')
+plt.xlabel(' % drug use\n')
+plt.ylabel('Drug type\n')
+
+# Display the boxplot
+plt.show()
+```
+
+
+![png](output_101_0.png)
+
+
+#### The drug use boxplot tells us that there are no outliers. Alcohol and marijuana use is much more widely used than the other drugs.
+
+
+```python
+#Configure the shape of the boxplot
+fig = plt.figure(figsize=(12,8))
+ax = fig.gca()
+
+# Plot the boxplot
+ax = sns.boxplot(data=freq, orient='h', ax=ax)
+
+# Add titles and axes labels to the boxplot
+ax.set_title('Different drug frequency\n')
+plt.xlabel(' Drug frequency in 12 months\n')
+plt.ylabel('Drug type\n')
+
+# Display the boxplot
+plt.show()
+```
+
+
+![png](output_103_0.png)
+
+
+#### The drug frequency boxplot tells us that there are outliers in the hallucinogen, pain reliever, tranquilizer, stimulant and sedative category. Alcohol and marijuana frequency remains to be much more widely used than the other drugs.
+
+
+```python
+# create correlation data
+plt.figure(figsize=(20,16))
+drug_correlation = drug.corr()
+
+# plot heatmap
+ax = sns.heatmap(drug_correlation, linewidth=0.5, cmap="RdBu_r", annot=True)
+
+# turn the axis label
+for item in ax.get_yticklabels():
+    item.set_rotation(0)
+
+for item in ax.get_xticklabels():
+    item.set_rotation(90)
+```
+
+
+![png](output_105_0.png)
+
+
+### Based on the EDA correlation heatmap, we see a strong positive correlation between ( above 0.95) within the usage of certain drugs:
+#### 1) Stimulant and marijuana use
+#### 2) Oxytocin and marijuana use
+#### 3) Hallucinogen and marijuana use
+#### 4) Pain-reliever and marijuana use
+#### 5) Oxytocin and pain-reliever use
+#### 6) Stimulant and pain-reliever use
+#### 7) Tranquilizer and pain-reliever use
+#### 8) Stimulant and oxytocin use
+#### 9) Tranquilizer and oxytocin use
+
+### 7.3 Create a testable hypothesis about this data
+
+Requirements for the question:
+
+1. Write a specific question you would like to answer with the data (that can be accomplished with EDA).
+2. Write a description of the "deliverables": what will you report after testing/examining your hypothesis?
+3. Use EDA techniques of your choice, numeric and/or visual, to look into your question.
+4. Write up your report on what you have found regarding the hypothesis about the data you came up with.
+
+
+Your hypothesis could be on:
+
+- Difference of group means
+- Correlations between variables
+- Anything else you think is interesting, testable, and meaningful!
+
+**Important notes:**
+
+You should be only doing EDA _relevant to your question_ here. It is easy to go down rabbit holes trying to look at every facet of your data, and so we want you to get in the practice of specifying a hypothesis you are interested in first and scoping your work to specifically answer that question.
+
+Some of you may want to jump ahead to "modeling" data to answer your question. This is a topic addressed in the next project and **you should not do this for this project.** We specifically want you to not do modeling to emphasize the importance of performing EDA _before_ you jump to statistical analysis.
+
+** Question **
+Is there a difference between the mean percentage of oxytocin and pain-reliever use. 
+** Deliverables **
+1) Mean percentage of oxytocin use
+2) Mean percentage of pain-reliever use
+3) t-statistic
+4) p-value
+
+<a id='null-hypothesis'></a>
+
+### The "null hypothesis"
+
+---
+
+The **null hypothesis** is a fundamental concept of Frequentist statistical tests. We typically denote the null hypothesis with **H0**. 
+
+Users are using oxycontin and pain-reliever concurrently. 
+
+> **H0:** The mean difference between the pain-reliever and oxytocin use is zero.
+
+<a id='alternative-hypothesis'></a>
+
+### The "alternative hypothesis"
+
+---
+
+The **alternative hypothesis** is the outcome of the experiment that we hope to show. In our example the alternative hypothesis is that there is in fact a mean difference in oxycontin and pain-reliever use. 
+
+> **H1:** The parameter of interest, our mean difference between oxytocin and pain-reliever use, is different than zero.
+
+**NOTE:** The null hypothesis and alternative hypothesis are concerned with the true values, or in other words the *parameter of the overall population*. Through the process of experimentation / hypothesis testing and statistical analysis of the results we will make an *inference* about this population parameter.
+
+
+```python
+mean2 = drug['oxycontin_use'].mean()
+distri_2 = drug['oxycontin_use'] - mean2
+```
+
+
+```python
+mean2
+```
+
+
+
+
+    0.9352941176470588
+
+
+
+
+```python
+mean1 = drug['painrelieve_use'].mean()
+distri_1 = drug['painrelieve_use'] - mean1
+```
+
+
+```python
+mean1
+```
+
+
+
+
+    6.270588235294118
+
+
+
+
+```python
+mean_difference = mean1 - mean2
+mean_difference
+```
+
+
+
+
+    5.3352941176470585
+
+
+
+<a id='t-tests'></a>
+
+### Evaluating our experiment with a t-test and p-value
+
+---
+
+Say in our experiment we measure the following results:
+
+- The subjects in the oxycontin group have mean percentage of 0.935
+- The subjects in the pain-reliever group have mean percentage of 6.271
+
+The difference between ooxycontin and pain-reliever groups is 5.336% . We can perform what is known as a **t-test** to evaluate this.
+
+First we will calculate a **t-statistic**. The t-statistic is a measure of the degree to which our groups differ standardized by the variance of our measurements.
+
+Secondly we will calculate a **p-value**. The p-value is a metric that indicates a probability that our measured difference was due to random chance in the sampling of subjects.
+
+
+
+
+<a id='likelihood-data'></a>
+
+### The likelihood of the data given the null hypothesis 
+
+---
+
+For our experiment we will set up a null hypothesis and an alternative hypothesis:
+
+> **H0:** The difference between in pain-reliever and oxycontin use is 0.
+
+> **H1:** The difference between in pain-reliever and oxycontin use is not 0.
+
+Likewise, our measured difference is **5.336**.
+
+Recall that as Frequentists we want to know:
+
+### $$P(\text{data}\;|\;\text{mean difference})$$
+
+**What is the probability that we observed this data GIVEN a specified mean difference in oxytocin use.**
+
+We obviously don't know the true mean difference in oxycontin use resulting from the drug. The whole point of conducting the experiment is to evaluate the drug. **Instead we will assume that the true mean difference is zero: the null hypothesis H0 is assumed to be true:**
+
+### $$P(\text{data}\;|\;\text{mean difference}=0)$$
+
+
+```python
+#95% confidence level
+alpha = 0.05
+import scipy.stats as stats
+results  = stats.ttest_ind(distri_1, distri_2, equal_var=False)
+
+if results.pvalue < (alpha/2):
+    print 'As p-value={results.pvalue} is less than {alpha/2}, we reject the null hypothesis and conclude that the mean difference between oxycontin and pain-reliever is not 0'
+else: 
+    print 'As p-value={results.pvalue} is less than {alpha/2}, we do not reject the null hypothesis'
+```
+
+    As p-value={results.pvalue} is less than {alpha/2}, we do not reject the null hypothesis
+
+
+<img src="http://imgur.com/xDpSobf.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+## 8. Introduction to dealing with outliers
+
+---
+
+Outliers are an interesting problem in statistics, in that there is not an agreed upon best way to define them. Subjectivity in selecting and analyzing data is a problem that will recur throughout the course.
+
+1. Pull out the rate variable from the sat dataset.
+2. Are there outliers in the dataset? Define, in words, how you _numerically define outliers._
+3. Print out the outliers in the dataset.
+4. Remove the outliers from the dataset.
+5. Compare the mean, median, and standard deviation of the "cleaned" data without outliers to the original. What is different about them and why?
+
+### 8.1.1 and 8.1.2
+#### An outliers is a data point which is numerically distant from the majority of the data point.
+
+
+
+```python
+sat['Rate']
+```
+
+
+
+
+    0     82
+    1     81
+    2     79
+    3     77
+    4     72
+    5     71
+    6     71
+    7     69
+    8     69
+    9     68
+    10    67
+    11    65
+    12    65
+    13    63
+    14    60
+    15    57
+    16    56
+    17    55
+    18    54
+    19    53
+    20    53
+    21    52
+    22    51
+    23    51
+    24    34
+    25    33
+    26    31
+    27    26
+    28    23
+    29    18
+    30    17
+    31    13
+    32    13
+    33    12
+    34    12
+    35    11
+    36    11
+    37     9
+    38     9
+    39     9
+    40     8
+    41     8
+    42     8
+    43     7
+    44     6
+    45     6
+    46     5
+    47     5
+    48     4
+    49     4
+    50     4
+    51    45
+    Name: Rate, dtype: int64
+
+
+
+
+```python
+rate.describe()
+
+
+
+```
+
+
+
+
+    count    51.000000
+    mean     37.000000
+    std      27.550681
+    min       4.000000
+    25%       9.000000
+    50%      33.000000
+    75%      64.000000
+    max      82.000000
+    Name: Rate, dtype: float64
+
+
+
+##### Since the maximum value is no more than two standard deviation away from the mean, we are able to conclude that there are no outliers. It is not necessary to remove any data point.
+
+<img src="http://imgur.com/GCAf1UX.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+### 9. Percentile scoring and spearman rank correlation
+
+---
+
+### 9.1 Calculate the spearman correlation of sat `Verbal` and `Math`
+
+1. How does the spearman correlation compare to the pearson correlation? 
+2. Describe clearly in words the process of calculating the spearman rank correlation.
+  - Hint: the word "rank" is in the name of the process for a reason!
+
+
+
+```python
+stats.pearsonr(sat['Verbal'], sat['Math'])
+```
+
+
+
+
+    (0.899870852544429, 1.1920026733067679e-19)
+
+
+
+
+```python
+verbal_math.corr()
+>>>>>>> parent of 58508c9... Update
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+<<<<<<< HEAD
+      <th>Rate</th>
+=======
+>>>>>>> parent of 58508c9... Update
+      <th>Verbal</th>
+      <th>Math</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+<<<<<<< HEAD
+      <th>0</th>
+      <td>82</td>
+      <td>509</td>
+      <td>510</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>81</td>
+      <td>499</td>
+      <td>513</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>79</td>
+      <td>511</td>
+      <td>515</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>77</td>
+      <td>495</td>
+      <td>505</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>72</td>
+      <td>520</td>
+      <td>516</td>
+=======
+      <th>Verbal</th>
+      <td>1.000000</td>
+      <td>0.899909</td>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <td>0.899909</td>
+      <td>1.000000</td>
+>>>>>>> parent of 58508c9... Update
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<<<<<<< HEAD
+
+```python
+sats_without_state_stand = (sats_without_state - sats_without_state.mean()) / sats_without_state.std()
+```
+
+
+```python
+sats_without_state_stand.plot.box(color=color, sym='r+')
+
+
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a26cc6a90>
+
+
+
+
+![png](output_50_1.png)
+
+
+<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+
+## 5. Create and examine subsets of the data
+
+---
+
+For these questions you will practice **masking** in pandas. Masking uses conditional statements to select portions of your DataFrame (through boolean operations under the hood.)
+
+Remember the distinction between DataFrame indexing functions in pandas:
+
+    .iloc[row, col] : row and column are specified by index, which are integers
+    .loc[row, col]  : row and column are specified by string "labels" (boolean arrays are allowed; useful for rows)
+    .ix[row, col]   : row and column indexers can be a mix of labels and integer indices
+    
+For detailed reference and tutorial make sure to read over the pandas documentation:
+
+http://pandas.pydata.org/pandas-docs/stable/indexing.html
+
+
+
+### 5.1 Find the list of states that have `Verbal` scores greater than the average of `Verbal` scores across states
+
+How many states are above the mean? What does this tell you about the distribution of `Verbal` scores?
+
+
+
+
+
+```python
+verbal_mean = sats['Verbal'].mean()
+print verbal_mean
+sats.loc[sats['Verbal'] > verbal_mean]
+```
+
+    532.529411765
+
+
+=======
+#### The similarity between pearson and spearman correlation coefficient are that they are both range between -1 to 1. However pearson correlation coefficient tells us the how closely related the two variables. While the spearman correlation coefficient is based on the rank order of the variable and it's measure quantity.
+
+
+### 9.2 Percentile scoring
+
+Look up percentile scoring of data. In other words, the conversion of numeric data to their equivalent percentile scores.
+
+http://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.percentile.html
+
+http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.percentileofscore.html
+
+1. Convert `Rate` to percentiles in the sat scores as a new column.
+2. Show the percentile of California in `Rate`.
+3. How is percentile related to the spearman rank correlation?
+
+
+```python
+sat['percentile'] = sat['Rate'].map(lambda x: stats.percentileofscore(sat['Rate'],x))
+sat.head()
+```
+
+>>>>>>> parent of 58508c9... Update
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+<<<<<<< HEAD
     }
 
     .dataframe tbody tr th {
@@ -5060,6 +7427,93 @@ sat[sat['State']== 'CA']
     .dataframe tbody tr th {
         vertical-align: top;
     }
+=======
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Rate</th>
+      <th>Verbal</th>
+      <th>Math</th>
+      <th>percentile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CT</td>
+      <td>82</td>
+      <td>509</td>
+      <td>510</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NJ</td>
+      <td>81</td>
+      <td>499</td>
+      <td>513</td>
+      <td>98.076923</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MA</td>
+      <td>79</td>
+      <td>511</td>
+      <td>515</td>
+      <td>96.153846</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NY</td>
+      <td>77</td>
+      <td>495</td>
+      <td>505</td>
+      <td>94.230769</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NH</td>
+      <td>72</td>
+      <td>520</td>
+      <td>516</td>
+      <td>92.307692</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+sat[sat['State']== 'CA']
+```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+>>>>>>> parent of 58508c9... Update
 </style>
 <table border="1" class="dataframe">
   <thead>
