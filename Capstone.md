@@ -291,5 +291,6 @@ There are 3 main things about this project. Quality of data set. Image augmentat
 
 ## Future project
 ### Expand dataset
-
+In order to have a versatile dataset, we need to include more brands into the data set and train it. With more data, we hope to include necessary measures such as using transfer learning.
 ### Web app
+A Web application where user can insert their images and get the brands of their handbags would make the model much more accessible. 
