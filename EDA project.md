@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+---
+layout: post
+title:  "Exploratory Data Analysis"
+date:   2017-11-30
+excerpt: "One of Data Science key purpose is to model and predict trends. With the Ames housing dataset, regression modelling and classification are able to utilise."
+image: "/images/eda2.jpg"
+permalink: /Project 1/
+
+---
 
 <img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 15px; height: 80px">
 
