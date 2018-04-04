@@ -358,7 +358,7 @@ sat.head(10)
 ```
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table1/" height="200" width="600" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table1/" height="200" width="900" overflow="auto"></iframe> 
 
 ```python
 # We found that one of the rows identifies the scores of all the states. 
@@ -1836,7 +1836,7 @@ drug.head()
 
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table2/" height="200" width="600" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table2/" height="200" width="900" overflow="auto"></iframe> 
 
 
 
@@ -1978,7 +1978,7 @@ drug.head()
 ```
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table2/" height="200" width="600" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table3/" height="200" width="900" overflow="auto"></iframe> 
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -1995,7 +1995,7 @@ drug.head(2)
 ```
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table4/" height="200" width="600" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table4/" height="200" width="900" overflow="auto"></iframe> 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
@@ -2009,7 +2009,7 @@ druggie = drug.drop(['age'], axis=1)
 druggie.head(2)
 ```
 
-<iframe src="https://hayatihamzah.github.io/project1/table5/" height="200" width="600" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table5/" height="200" width="900" overflow="auto"></iframe> 
 
 ### 7.2 Do a high-level, initial overview of the data
 ---
