@@ -3,7 +3,7 @@ layout: post
 title:  "Exploratory Data Analysis"
 date:   2017-11-30
 excerpt: "Basic exploration of data is the bread and butter of any data scientist"
-image: "/https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda.jpg"
+image: "/images/eda2.jpg"
 permalink: /Project 1/
 
 ---
