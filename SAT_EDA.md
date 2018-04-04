@@ -2187,9 +2187,7 @@ plt.ylabel('Drug type\n')
 plt.show()
 ```
 
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda14.png)
-
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda14"><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda14.png" style=" width:100%" /></a>
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
