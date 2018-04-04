@@ -3,7 +3,7 @@ layout: post
 title:  "Exploratory Data Analysis"
 date:   2017-11-30
 excerpt: "Basic exploration of data is the bread and butter of any data scientist"
-image: "/images/eda.jpg"
+image: "/https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda.jpg"
 permalink: /Project 1/
 
 ---
@@ -751,15 +751,15 @@ plt.show()
 ```
 
 
-![png](output_24_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda1.png)
 
 
 
-![png](output_24_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda2.png)
 
 
 
-![png](output_24_2.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda3.png)
 
 
 ### 3.2 Using seaborn's `pairplot`, show the joint distributions for each of `Rate`, `Math`, and `Verbal`
@@ -773,7 +773,7 @@ plt.show()
 ```
 
 
-![png](output_26_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda4.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -805,7 +805,7 @@ verbal_math.plot.hist(stacked=True, bins=20)
 
 
 
-![png](output_29_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda5.png)
 
 
 ### 4.2 Plot `Verbal` and `Math` on the same chart using boxplots
@@ -828,7 +828,7 @@ verbal_math.plot.box(color=color, sym='r+')
 
 
 
-![png](output_31_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda6.png)
 
 
 ### 4.3 Plot `Verbal`, `Math`, and `Rate` appropriately on the same boxplot chart
@@ -851,7 +851,7 @@ verbal_math_rate.plot.box(color=color, sym='r+')
 
 
 
-![png](output_33_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda7.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -894,7 +894,7 @@ plt.show()
 ```
 
 
-![png](output_37_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda8.png)
 
 
 Notice that nothing changes about the distribution except for the location and the scale
@@ -932,7 +932,7 @@ plt.show()
 ```
 
 
-![png](output_41_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda9.png)
 
 
 
@@ -969,7 +969,7 @@ plt.show()
 ```
 
 
-![png](output_44_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda10.png)
 
 
 
@@ -1137,7 +1137,7 @@ sats_without_state_stand.plot.box(color=color, sym='r+')
 
 
 
-![png](output_49_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda11.png)
 
 
 <a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
@@ -1794,7 +1794,7 @@ for item in ax.get_xticklabels():
 ```
 
 
-![png](output_67_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda12.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -2698,7 +2698,7 @@ plt.show()
 ```
 
 
-![png](output_100_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda13.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -2725,7 +2725,7 @@ plt.show()
 ```
 
 
-![png](output_102_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda14.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -2751,7 +2751,7 @@ for item in ax.get_xticklabels():
 ```
 
 
-![png](output_104_0.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda15.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -3291,7 +3291,7 @@ ax.set_xlabel('Frequency of Simulant')
 
 
 
-![png](output_133_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda16.png)
 
 
 ### 9.3.3 Plot the same variable but percentile scored
@@ -3315,7 +3315,7 @@ ax.set_ylabel('Frequency')
 
 
 
-![png](output_135_1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda17.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
