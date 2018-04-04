@@ -767,9 +767,7 @@ sns.pairplot(sats, vars=['Rate','Math','Verbal'] , hue='State')
 plt.show()
 ```
 
-
-<img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda4.png" style="width:1100px;height:1500px;">
-
+<a href="hhttps://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda4."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/eda4.png" style=" width:1100px;height:1500px;" /></a>
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
