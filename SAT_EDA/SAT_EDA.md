@@ -1,9 +1,15 @@
+---
+layout: post
+title:  "Exploratory Data Analysis"
+date:   2017-11-30
+excerpt: "Basic exploration of data is the bread and butter of any data scientist"
+image: "/images/eda.jpg"
+permalink: /Project 1/
 
-<img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 15px; height: 80px">
+---
+<a href="https://imgur.com/ysTjEZO"><img src="https://i.imgur.com/ysTjEZO.png" style="float: left; margin: 15px; height: 80px" title="source: imgur.com" /></a>
 
-# Project 2
-
-### Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis (EDA)
 
 ---
 
@@ -15,11 +21,13 @@ Also unfortunately, that is the entirety of what you've been told. And the mayor
 
 ---
 
-This project is focused on exploratory data analysis, aka "EDA". EDA is an essential part of the data science analysis pipeline. Failure to perform EDA before modeling is almost guaranteed to lead to bad models and faulty conclusions. What you do in this project are good practices for all projects going forward, especially those after this bootcamp!
+This project is focused on exploratory data analysis, aka "EDA". EDA is an essential part of the data science analysis pipeline. Failure to perform EDA before modeling is almost guaranteed to lead to bad models and faulty conclusions. What you do in this project are good practices for all projects going forward!
 
-This lab includes a variety of plotting problems. Much of the plotting code will be left up to you to find either in the lecture notes, or if not there, online. There are massive amounts of code snippets either in documentation or sites like [Stack Overflow](https://stackoverflow.com/search?q=%5Bpython%5D+seaborn) that have almost certainly done what you are trying to do.
+This jupyter notebook lab includes a variety of plotting problems.
 
-**Get used to googling for code!** You will use it every single day as a data scientist, especially for visualization and plotting.
+**As a data scientist, one will use visualization and plotting every single day.** 
+
+
 
 #### Package imports
 
@@ -39,15 +47,15 @@ import matplotlib.pyplot as plt
 %config InlineBackend.figure_format = 'retina'
 ```
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
-
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 ## 1. Load the `sat_scores.csv` dataset and describe it
 
 ---
 
-You should replace the placeholder path to the `sat_scores.csv` dataset below with your specific path to the file.
+Input the placeholder path to the `sat_scores.csv` dataset below with a specific path to the file.
 
 ### 1.1 Load the file with the `csv` module and put it in a Python dictionary
+---
 
 The dictionary format for data will be the column names as key, and the data under each column as the values.
 
@@ -290,6 +298,7 @@ d
 
 
 ### 1.2 Make a pandas DataFrame object with the SAT dictionary, and another with the pandas `.read_csv()` function
+---
 
 Compare the DataFrames using the `.dtypes` attribute in the DataFrame objects. What is the difference between loading from file and inputting this dictionary (if any)?
 
@@ -297,7 +306,6 @@ Compare the DataFrames using the `.dtypes` attribute in the DataFrame objects. W
 ```python
 sat = pd.read_csv('sat_scores.csv')
 sat.dtypes
-
 ```
 
 
@@ -328,17 +336,21 @@ sat2.dtypes
 
 
 
-The difference between creating a dataframe from a dictionary (line 361) and using the read_csv panda function is the content of the dataframe. The elements within the csv file will maintain it's type when using the read_csv panda function. However, the creating a dataframe from a dictionary will convert the elements into objects. This will pose issues during data cleaning and munging process.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+### Answer: 
+The difference between creating a dataframe from a dictionary (in Q1.1) and using the read_csv panda function is the content of the dataframe. The elements within the csv file will maintain it's type when using the read_csv panda function. However, the creating a dataframe from a dictionary will convert the elements into objects. This will pose issues during data cleaning and munging process.
 
-If you did not convert the string column values to float in your dictionary, the columns in the DataFrame are of type `object` (which are string values, essentially). 
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+### TIP:
+If you don't convert the string column values to float in your dictionary, the columns in the DataFrame are of type `object` (which are string values, essentially). 
 
-### 1.3 Look at the first ten rows of the DataFrame: what does our data describe?
-
+### 1.3 Look at the first ten rows of the DataFrame: What does our data describe?
+---
 From now on, use the DataFrame loaded from the file using the `.read_csv()` function.
 
 Use the `.head(num)` built-in DataFrame function, where `num` is the number of rows to print out.
 
-You are not given a "codebook" with this data, so you will have to make some (very minor) inference.
+You are not given a "codebook" with this data, so some (very minor) inference must be made.
 
 
 ```python
@@ -349,17 +361,17 @@ sat.head(10)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -451,6 +463,8 @@ sat.head(10)
 
 
 ```python
+# We found that one of the rows identifies the scores of all the states. 
+# We need to check if that data in the last row is correct
 sat['State'].unique()
 ```
 
@@ -465,7 +479,7 @@ sat['State'].unique()
 
 
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 
 ## 2. Create a "data dictionary" based on the data
 
@@ -520,8 +534,6 @@ sat.info()
     memory usage: 1.7+ KB
 
 
-There are no null values within the DataFrame
-
 
 ```python
 #Familiarise with the column names
@@ -531,7 +543,7 @@ sat.columns
 
 
 
-    Index([u'State', u'Rate', u'Verbal', u'Math'], dtype='object')
+    Index(['State', 'Rate', 'Verbal', 'Math'], dtype='object')
 
 
 
@@ -544,17 +556,17 @@ sat.tail()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -609,9 +621,13 @@ sat.tail()
 
 
 
-The last row attempts to summarise the readings of each feature.
-We will assess the findings in the 'All' row in order to identify if it's summary is correct by
-removing the last row to ensure that the data analysis is not affected by the summary of the table
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+#### Update of the SAT Dataset:
+- No null values within the DataFrame
+- Last row attempts to summarise the readings of each feature.
+- Assess the findings in the 'All' row in order to identify if it's summary is correct by removing the last row to ensure that the data analysis is not affected by the 'summary' of the table
 
 
 ```python
@@ -627,17 +643,17 @@ sats.describe()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -704,9 +720,12 @@ sats.describe()
 
 
 
-#### From the mean value of rate,math and verbal in the sats DataFrame, we observe that the mean are 37.0, 533 and 532. These number are not coherent with the values in the 'All' row. Therefore, we shall proceed to remove the last row of the sat DataFrame. 
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+---
+From the mean value of `Rate`, `Math`, and `Verbal` in the SAT DataFrame, we observe that the mean are **37.0**, **533** and **532**. These number are not coherent with the values in the 'All' row. Therefore, we shall proceed to **remove** the last row of the sat DataFrame. 
+
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 
 ## 3. Plot the data using seaborn
 
@@ -715,8 +734,6 @@ sats.describe()
 ### 3.1 Using seaborn's `distplot`, plot the distributions for each of `Rate`, `Math`, and `Verbal`
 
 Set the keyword argument `kde=False`. This way you can actually see the counts within bins. You can adjust the number of bins to your liking. 
-
-[Please read over the `distplot` documentation to learn about the arguments and fine-tune your chart if you want.](https://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.distplot.html#seaborn.distplot)
 
 
 ```python
@@ -734,22 +751,20 @@ plt.show()
 ```
 
 
-![png](output_24_0.png)
+![png](images/eda1.png)
 
 
 
-![png](output_24_1.png)
+![png](images/eda2.png)
 
 
 
-![png](output_24_2.png)
+![png](images/eda3.png)
 
 
 ### 3.2 Using seaborn's `pairplot`, show the joint distributions for each of `Rate`, `Math`, and `Verbal`
-
+---
 Explain what the visualization tells you about your data.
-
-[Please read over the `pairplot` documentation to fine-tune your chart.](https://stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html#seaborn.pairplot)
 
 
 ```python
@@ -758,20 +773,21 @@ plt.show()
 ```
 
 
-![png](output_26_0.png)
+![png](images/eda4.png)
 
 
-The first row represent
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+---
+From the pairplot, we are able to observe that there is states which fair very well on the `Math` and `Verbal` test, they tend to have low rate of SAT passes. Therefore, we are able to infer that students from the states which scores well, they take the SAT when they are sure to score.
+
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 
 ## 4. Plot the data using built-in pandas functions.
 
 ---
 
-Pandas is very powerful and contains a variety of nice, built-in plotting functions for your data. Read the documentation here to understand the capabilities:
-
-http://pandas.pydata.org/pandas-docs/stable/visualization.html
+Pandas is very powerful and contains a variety of nice, built-in plotting functions for your data. 
 
 ### 4.1 Plot a stacked histogram with `Verbal` and `Math` using pandas
 
@@ -779,25 +795,22 @@ http://pandas.pydata.org/pandas-docs/stable/visualization.html
 ```python
 verbal_math = sats[['Verbal','Math']]
 verbal_math.plot.hist(stacked=True, bins=20)
-
 ```
 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a16791190>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a185fa828>
 
 
 
 
-![png](output_29_1.png)
+![png](images/eda5.png)
 
 
 ### 4.2 Plot `Verbal` and `Math` on the same chart using boxplots
 
 What are the benefits of using a boxplot as compared to a scatterplot or a histogram?
-
-What's wrong with plotting a box-plot of `Rate` on the same chart as `Math` and `Verbal`?
 
 The boxplot is capable of indicating the upper and lower limit, maximum value and minimum value. However, the scatterplot and histogram only gives us a generic idea of distribution of the data.
 
@@ -810,15 +823,13 @@ verbal_math.plot.box(color=color, sym='r+')
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a18a73c50>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a172db860>
 
 
 
 
-![png](output_32_1.png)
+![png](images/eda6.png)
 
-
-<img src="http://imgur.com/xDpSobf.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
 
 ### 4.3 Plot `Verbal`, `Math`, and `Rate` appropriately on the same boxplot chart
 
@@ -835,15 +846,20 @@ verbal_math_rate.plot.box(color=color, sym='r+')
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a18e63990>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a18e7f978>
 
 
 
 
-![png](output_34_1.png)
+![png](images/eda7.png)
 
 
-#### The boxplot is not right as rate is not on the same metric as verbal and maths. We will need to standardise the data.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+What's wrong with plotting a box-plot of `Rate` on the same chart as `Math` and `Verbal`?
+
+The **initial** boxplot is a misrepresentation. The rate is not on the same metric as verbal and maths. Therefore, the dataset must be standardised. 
 
 
 ```python
@@ -851,21 +867,21 @@ verbal_math_rate.plot.box(color=color, sym='r+')
 rate_value = sats.Rate.values
 rate_mean = np.mean(rate_value)
 rate_std = np.std(rate_value)
-print rate_mean, rate_std
+print(rate_mean, rate_std)
 ```
 
-    37.0 27.2792386761
+    37.0 27.27923867605359
 
 
 
 ```python
 #Standardisation of rate
 rate_stand = (rate_value - rate_mean) / rate_std
-print np.mean(rate_stand), np.std(rate_stand)
+print(np.mean(rate_stand), np.std(rate_stand))
 # not exactly a mean of 0 but excruciatingly close
 ```
 
-    -8.70763156569e-18 1.0
+    -8.707631565687502e-18 1.0
 
 
 
@@ -873,13 +889,12 @@ print np.mean(rate_stand), np.std(rate_stand)
 #Plot histogram to get observe any changes
 fig = plt.figure(figsize=(8,4))
 ax = fig.gca()
-
 ax = sns.distplot(rate, bins=30, kde=False)
 plt.show()
 ```
 
 
-![png](output_38_0.png)
+![png](images/eda8.png)
 
 
 Notice that nothing changes about the distribution except for the location and the scale
@@ -890,21 +905,21 @@ Notice that nothing changes about the distribution except for the location and t
 math_value = sats.Math.values
 math_mean = np.mean(math_value)
 math_std = np.std(math_value)
-print math_mean, math_std
+print(math_mean, math_std)
 ```
 
-    531.843137255 35.9298731731
+    531.843137254902 35.92987317311408
 
 
 
 ```python
 #Standardisation of math
 math_stand = (math_value - math_mean) / math_std
-print np.mean(math_stand), np.std(math_stand)
+print(np.mean(math_stand), np.std(math_stand))
 # not exactly a mean of 0 but excruciatingly close
 ```
 
-    -8.2722499874e-16 1.0
+    -8.272249987403127e-16 1.0
 
 
 
@@ -912,13 +927,12 @@ print np.mean(math_stand), np.std(math_stand)
 #Plot histogram to get observe any changes
 fig = plt.figure(figsize=(8,4))
 ax = fig.gca()
-
 ax = sns.distplot(math, bins=30, kde=False)
 plt.show()
 ```
 
 
-![png](output_42_0.png)
+![png](images/eda9.png)
 
 
 
@@ -927,21 +941,21 @@ plt.show()
 verbal_value = sats.Verbal.values
 verbal_mean = np.mean(verbal_value)
 verbal_std = np.std(verbal_value)
-print verbal_mean, verbal_std
+print(verbal_mean, verbal_std)
 ```
 
-    532.529411765 33.0319826842
+    532.5294117647059 33.03198268415228
 
 
 
 ```python
 #Standardisation of Verbal
 verbal_stand = (verbal_value - verbal_mean) / verbal_std
-print np.mean(verbal_stand), np.std(verbal_stand)
+print(np.mean(verbal_stand), np.std(verbal_stand))
 # not exactly a mean of 0 but excruciatingly close
 ```
 
-    8.09809735609e-16 1.0
+    8.098097356089377e-16 0.9999999999999998
 
 
 
@@ -955,7 +969,7 @@ plt.show()
 ```
 
 
-![png](output_45_0.png)
+![png](images/eda10.png)
 
 
 
@@ -967,17 +981,17 @@ sats.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1046,17 +1060,17 @@ sats_without_state.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1113,28 +1127,25 @@ sats_without_state_stand = (sats_without_state - sats_without_state.mean()) / sa
 
 ```python
 sats_without_state_stand.plot.box(color=color, sym='r+')
-
-
 ```
 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1a26cc6a90>
+    <matplotlib.axes._subplots.AxesSubplot at 0x1a18e7bf28>
 
 
 
 
-![png](output_50_1.png)
+![png](images/eda11.png)
 
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
-
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 ## 5. Create and examine subsets of the data
 
 ---
 
-For these questions you will practice **masking** in pandas. Masking uses conditional statements to select portions of your DataFrame (through boolean operations under the hood.)
+For these questions **masking** will be used in pandas. Masking uses conditional statements to select portions of your DataFrame (through boolean operations under the hood.)
 
 Remember the distinction between DataFrame indexing functions in pandas:
 
@@ -1147,9 +1158,8 @@ For detailed reference and tutorial make sure to read over the pandas documentat
 http://pandas.pydata.org/pandas-docs/stable/indexing.html
 
 
-
 ### 5.1 Find the list of states that have `Verbal` scores greater than the average of `Verbal` scores across states
-
+---
 How many states are above the mean? What does this tell you about the distribution of `Verbal` scores?
 
 
@@ -1158,28 +1168,28 @@ How many states are above the mean? What does this tell you about the distributi
 
 ```python
 verbal_mean = sats['Verbal'].mean()
-print verbal_mean
+print(verbal_mean)
 sats.loc[sats['Verbal'] > verbal_mean]
 ```
 
-    532.529411765
+    532.5294117647059
 
 
 
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1383,20 +1393,20 @@ sats.loc[sats['Verbal'] > verbal_mean].count()
 
 
 
-## There are a total of 24 states that above the mean score of the verbal test. Therefore, the distribution is considerably normally distributed.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+### There are a total of 24 states that above the mean score of the verbal test. Therefore, the distribution is considerably normally distributed.
 
 ### 5.2 Find the list of states that have `Verbal` scores greater than the median of `Verbal` scores across states
+---
 
 How does this compare to the list of states greater than the mean of `Verbal` scores? Why?
 
 
 ```python
 verbal_median = sats['Verbal'].median() 
-print verbal_median
+print(verbal_median)
 sats[sats['Verbal'] > verbal_median]
-
-
-
 ```
 
     527.0
@@ -1406,17 +1416,17 @@ sats[sats['Verbal'] > verbal_median]
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1620,10 +1630,13 @@ sats[sats['Verbal'] > verbal_median].count()
 
 
 
-## There are a total of 24 states that above the median score of the verbal test. It is similar to list of state which are above the mean score of the verbal test. This is so as the distribution of the scores are normally distributed.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+ There are a total of 24 states that above the median score of the verbal test. It is similar to list of state which are above the mean score of the verbal test. This is so as the distribution of the scores are normally distributed.
 
 ### 5.3 Create a column that is the difference between the `Verbal` and `Math` scores
-
+---
 Specifically, this should be `Verbal - Math`.
 
 
@@ -1636,17 +1649,17 @@ sats.head(5)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -1708,18 +1721,20 @@ sats.head(5)
 
 
 ### 5.4 Create two new DataFrames showing states with the greatest difference between scores
+---
 
 1. Your first DataFrame should be the 10 states with the greatest gap between `Verbal` and `Math` scores where `Verbal` is greater than `Math`. It should be sorted appropriately to show the ranking of states.
 2. Your second DataFrame will be the inverse: states with the greatest gap between `Verbal` and `Math` such that `Math` is greater than `Verbal`. Again, this should be sorted appropriately to show rank.
 3. Print the header of both variables, only showing the top 3 states in each.
 
-#### Question 5.4.1 and 5.4.3(A)
+#### Question 5.4.1 Find the states with the highest difference between `Verbal` and `Math` scores
+---
 
 
 ```python
 state_diff_score = sats[['State','diff_verbal_math']]
 top_3_verbal = state_diff_score.sort_values('diff_verbal_math').head(9)
-print 'The states is ' + top_3_verbal.State.head(3)
+print('The states is ' + top_3_verbal.State.head(3))
 ```
 
     21    The states is HI
@@ -1728,13 +1743,14 @@ print 'The states is ' + top_3_verbal.State.head(3)
     Name: State, dtype: object
 
 
-#### Question 5.4.2
+#### Question 5.4.2 Find the states with the lowest difference between `Verbal` and `Math` scores
+---
 
 
 
 ```python
 top_3_math = state_diff_score.sort_values('diff_verbal_math').tail(9)
-print 'The state is ' +  top_3_math.State.head(3)
+print('The state is ' +  top_3_math.State.head(3))
 ```
 
     41    The state is OK
@@ -1743,15 +1759,14 @@ print 'The state is ' +  top_3_math.State.head(3)
     Name: State, dtype: object
 
 
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 ## 6. Examine summary statistics
-
 ---
 
 Checking the summary statistics for data is an essential step in the EDA process!
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
-
 ### 6.1 Create the correlation matrix of your variables (excluding `State`).
+---
 
 What does the correlation matrix tell you?
 
@@ -1779,14 +1794,17 @@ for item in ax.get_xticklabels():
 ```
 
 
-![png](output_68_0.png)
+![png](images/eda12.png)
 
 
-#### Based on the absolute value of the pearson correlation value, we observe high correlation between two sets of groups: Verbal and Maths scores (0.9) and, Verbal scores and Rate of passes(-0.89). This implies that candidates with high verbal scores are highly likely in attain high maths scores. Whereas, candidates with high verbal scores are highly likely to attain a low rate or vice versa.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+---
+ Based on the absolute value of the pearson correlation value, we observe high correlation between two sets of groups: Verbal and Maths scores (0.9) and, Verbal scores and Rate of passes(-0.89). This implies that candidates with high verbal scores are highly likely in attain high maths scores. Whereas, candidates with high verbal scores are highly likely to come from states with low passing rates.
 
 ### 6.2 Use pandas'  `.describe()` built-in function on your DataFrame
+---
+
 
 Write up what each of the rows returned by the function indicate.
 
@@ -1810,7 +1828,10 @@ math.describe()
 
 
 
-#### Based on the data of the 50 states, we observe that the mean math score of the country is 532 with a minimum score of 439 and maximum score of 603.Those in the upper percentile will score more than 558.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+Based on the data of the 50 states, we observe that the **mean** math score of the country is **532** with a **minimum score of 439** and **maximum score of 603**.Those in the **upper percentile will score more than 558**.
 
 
 ```python
@@ -1832,7 +1853,10 @@ verbal.describe()
 
 
 
-#### Based on the data of the 50 states, we observe that the mean verbal score of the country is 533 with a minimum score of 482 and maximum score of 593. Those in the upper percentile will score more than 593.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+Based on the data of the 50 states, we observe that the **mean** verbal score of the country is **533** with a **minimum score of 482** and **maximum score of 593**. Those in the **upper percentile will score more than 593**.
 
 
 ```python
@@ -1854,17 +1878,19 @@ rate.describe()
 
 
 
-#### Based on the data of the 50 states, we observe that the mean rate of the country is 37 with a minimum rate of 4 and maximum score of 82. Those in the upper percentile will rate more than 64.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
-<img src="http://imgur.com/xDpSobf.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+---
+Based on the data of the 50 states, we observe that the **mean** rate of the country is **37** with a **minimum rate of 4** and **maximum score of 82**. Those in the **upper percentile will rate more than 64**.
 
 ### 6.3 Assign and print the _covariance_ matrix for the dataset
-
+---
 1. Describe how the covariance matrix is different from the correlation matrix.
 2. What is the process to convert the covariance into the correlation?
 3. Why is the correlation matrix preferred to the covariance matrix for examining relationships in your data?
 
-## 6.3.1 & 6.3.2
+### 6.3.1 & 6.3.2 Understanding the concept of Covariance and Pearson Correlation
+---
 The covariance matrix indicates "relatedness" between variables. It is literally the sum of deviations from the mean of  X times deviations from the mean of  Y adjusted by the sample size  N.
 ### $$ \text{covariance}(X, Y) = \sum_{i=1}^N \frac{(X - \bar{X})(Y - \bar{Y})}{N}$$
 From the formula above, it is challenging in deducing what the value means as X and Y might have different units.
@@ -1872,15 +1898,15 @@ Therefore, we rely on the correlation matrix helps normalise the covariance by d
 ### $$ \text{pearson correlation}\;r = cor(X, Y) =\frac{cov(X, Y)}{std(X)std(Y)}$$
 The correlation matrix allows us to easily interprete the "relatedness" on a scale of -1 to 1 as it takes the diversity of the data into account.
 
-## 6.3.3
-
+### 6.3.3 Covariance of `Verbal`, `Math`, and `Rate` 
+---
 
 The correlation matrix is much more effective in assessing the the relationship between the two different variables as it the deviations of both variables will be taken into account. 
 
 
 ```python
 covariance = features.cov()
-print covariance
+print(covariance)
 ```
 
                    Math       Verbal    Rate
@@ -1889,42 +1915,41 @@ print covariance
     Rate    -773.220000  -816.280000  759.04
 
 
-<img src="http://imgur.com/l5NasQj.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
-
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 ## 7. Performing EDA on "drug use by age" data.
 
 ---
 
-You will now switch datasets to one with many more variables. This section of the project is more open-ended - use the techniques you practiced above!
+You will now switch datasets to one with many more variables. This section of the project is more open-ended.
 
 We'll work with the "drug-use-by-age.csv" data, sourced from and described here: https://github.com/fivethirtyeight/data/tree/master/drug-use-by-age.
 
-### 7.1
-
-Load the data using pandas. Does this data require cleaning? Are variables missing? How will this affect your approach to EDA on the data?
+### 7.1 Load the data using pandas. 
+---
+Does this data require cleaning? Are variables missing? How will this affect your approach to EDA on the data?
 
 
 ```python
 #Load the data using pandas
 drug = pd.read_csv('drug-use-by-age.csv', na_values='-')
-drug
+drug.head()
 ```
 
 
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -2075,305 +2100,17 @@ drug
       <td>0.2</td>
       <td>3.0</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>17</td>
-      <td>3038</td>
-      <td>49.3</td>
-      <td>13.0</td>
-      <td>28.0</td>
-      <td>36.0</td>
-      <td>2.0</td>
-      <td>5.0</td>
-      <td>0.1</td>
-      <td>21.0</td>
-      <td>...</td>
-      <td>1.4</td>
-      <td>6.0</td>
-      <td>3.5</td>
-      <td>7.0</td>
-      <td>2.8</td>
-      <td>9.0</td>
-      <td>0.6</td>
-      <td>48.0</td>
-      <td>0.5</td>
-      <td>6.5</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>18</td>
-      <td>2469</td>
-      <td>58.7</td>
-      <td>24.0</td>
-      <td>33.7</td>
-      <td>52.0</td>
-      <td>3.2</td>
-      <td>5.0</td>
-      <td>0.4</td>
-      <td>10.0</td>
-      <td>...</td>
-      <td>1.7</td>
-      <td>7.0</td>
-      <td>4.9</td>
-      <td>12.0</td>
-      <td>3.0</td>
-      <td>8.0</td>
-      <td>0.5</td>
-      <td>12.0</td>
-      <td>0.4</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>19</td>
-      <td>2223</td>
-      <td>64.6</td>
-      <td>36.0</td>
-      <td>33.4</td>
-      <td>60.0</td>
-      <td>4.1</td>
-      <td>5.5</td>
-      <td>0.5</td>
-      <td>2.0</td>
-      <td>...</td>
-      <td>1.5</td>
-      <td>7.5</td>
-      <td>4.2</td>
-      <td>4.5</td>
-      <td>3.3</td>
-      <td>6.0</td>
-      <td>0.4</td>
-      <td>105.0</td>
-      <td>0.3</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>20</td>
-      <td>2271</td>
-      <td>69.7</td>
-      <td>48.0</td>
-      <td>34.0</td>
-      <td>60.0</td>
-      <td>4.9</td>
-      <td>8.0</td>
-      <td>0.6</td>
-      <td>5.0</td>
-      <td>...</td>
-      <td>1.7</td>
-      <td>12.0</td>
-      <td>5.4</td>
-      <td>10.0</td>
-      <td>4.0</td>
-      <td>12.0</td>
-      <td>0.9</td>
-      <td>12.0</td>
-      <td>0.5</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>21</td>
-      <td>2354</td>
-      <td>83.2</td>
-      <td>52.0</td>
-      <td>33.0</td>
-      <td>52.0</td>
-      <td>4.8</td>
-      <td>5.0</td>
-      <td>0.5</td>
-      <td>17.0</td>
-      <td>...</td>
-      <td>1.3</td>
-      <td>13.5</td>
-      <td>3.9</td>
-      <td>7.0</td>
-      <td>4.1</td>
-      <td>10.0</td>
-      <td>0.6</td>
-      <td>2.0</td>
-      <td>0.3</td>
-      <td>9.0</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>22-23</td>
-      <td>4707</td>
-      <td>84.2</td>
-      <td>52.0</td>
-      <td>28.4</td>
-      <td>52.0</td>
-      <td>4.5</td>
-      <td>5.0</td>
-      <td>0.5</td>
-      <td>5.0</td>
-      <td>...</td>
-      <td>1.7</td>
-      <td>17.5</td>
-      <td>4.4</td>
-      <td>12.0</td>
-      <td>3.6</td>
-      <td>10.0</td>
-      <td>0.6</td>
-      <td>46.0</td>
-      <td>0.2</td>
-      <td>52.0</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>24-25</td>
-      <td>4591</td>
-      <td>83.1</td>
-      <td>52.0</td>
-      <td>24.9</td>
-      <td>60.0</td>
-      <td>4.0</td>
-      <td>6.0</td>
-      <td>0.5</td>
-      <td>6.0</td>
-      <td>...</td>
-      <td>1.3</td>
-      <td>20.0</td>
-      <td>4.3</td>
-      <td>10.0</td>
-      <td>2.6</td>
-      <td>10.0</td>
-      <td>0.7</td>
-      <td>21.0</td>
-      <td>0.2</td>
-      <td>17.5</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>26-29</td>
-      <td>2628</td>
-      <td>80.7</td>
-      <td>52.0</td>
-      <td>20.8</td>
-      <td>52.0</td>
-      <td>3.2</td>
-      <td>5.0</td>
-      <td>0.4</td>
-      <td>6.0</td>
-      <td>...</td>
-      <td>1.2</td>
-      <td>13.5</td>
-      <td>4.2</td>
-      <td>10.0</td>
-      <td>2.3</td>
-      <td>7.0</td>
-      <td>0.6</td>
-      <td>30.0</td>
-      <td>0.4</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>30-34</td>
-      <td>2864</td>
-      <td>77.5</td>
-      <td>52.0</td>
-      <td>16.4</td>
-      <td>72.0</td>
-      <td>2.1</td>
-      <td>8.0</td>
-      <td>0.5</td>
-      <td>15.0</td>
-      <td>...</td>
-      <td>0.9</td>
-      <td>46.0</td>
-      <td>3.6</td>
-      <td>8.0</td>
-      <td>1.4</td>
-      <td>12.0</td>
-      <td>0.4</td>
-      <td>54.0</td>
-      <td>0.4</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>35-49</td>
-      <td>7391</td>
-      <td>75.0</td>
-      <td>52.0</td>
-      <td>10.4</td>
-      <td>48.0</td>
-      <td>1.5</td>
-      <td>15.0</td>
-      <td>0.5</td>
-      <td>48.0</td>
-      <td>...</td>
-      <td>0.3</td>
-      <td>12.0</td>
-      <td>1.9</td>
-      <td>6.0</td>
-      <td>0.6</td>
-      <td>24.0</td>
-      <td>0.2</td>
-      <td>104.0</td>
-      <td>0.3</td>
-      <td>10.0</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>50-64</td>
-      <td>3923</td>
-      <td>67.2</td>
-      <td>52.0</td>
-      <td>7.3</td>
-      <td>52.0</td>
-      <td>0.9</td>
-      <td>36.0</td>
-      <td>0.4</td>
-      <td>62.0</td>
-      <td>...</td>
-      <td>0.4</td>
-      <td>5.0</td>
-      <td>1.4</td>
-      <td>10.0</td>
-      <td>0.3</td>
-      <td>24.0</td>
-      <td>0.2</td>
-      <td>30.0</td>
-      <td>0.2</td>
-      <td>104.0</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>65+</td>
-      <td>2448</td>
-      <td>49.3</td>
-      <td>52.0</td>
-      <td>1.2</td>
-      <td>36.0</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>0.2</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>364.0</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>0.0</td>
-      <td>15.0</td>
-    </tr>
   </tbody>
 </table>
-<p>17 rows × 28 columns</p>
+<p>5 rows × 28 columns</p>
 </div>
 
 
 
 ### Data quality check :
-### 1) No null values 
-### 2) Check Columns labels 
-### 3) Check dtypes of the columns
+- No null values 
+- Check Columns labels 
+- Check dtypes of the columns
 
 
 
@@ -2417,7 +2154,10 @@ drug.isnull().sum()
 
 
 
-#### We can observe that there are null values in the EDA data set under cocaine frequency, crack frequency, heroin frequency, inhalant frequency, oxycontin frequency.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+We can observe that there are null values in the EDA data set under cocaine frequency, crack frequency, heroin frequency, inhalant frequency, oxycontin frequency.
 
 
 ```python
@@ -2472,19 +2212,22 @@ drug.columns
 
 
 
-    Index([u'age', u'n', u'alcohol-use', u'alcohol-frequency', u'marijuana-use',
-           u'marijuana-frequency', u'cocaine-use', u'cocaine-frequency',
-           u'crack-use', u'crack-frequency', u'heroin-use', u'heroin-frequency',
-           u'hallucinogen-use', u'hallucinogen-frequency', u'inhalant-use',
-           u'inhalant-frequency', u'pain-releiver-use', u'pain-releiver-frequency',
-           u'oxycontin-use', u'oxycontin-frequency', u'tranquilizer-use',
-           u'tranquilizer-frequency', u'stimulant-use', u'stimulant-frequency',
-           u'meth-use', u'meth-frequency', u'sedative-use', u'sedative-frequency'],
+    Index(['age', 'n', 'alcohol-use', 'alcohol-frequency', 'marijuana-use',
+           'marijuana-frequency', 'cocaine-use', 'cocaine-frequency', 'crack-use',
+           'crack-frequency', 'heroin-use', 'heroin-frequency', 'hallucinogen-use',
+           'hallucinogen-frequency', 'inhalant-use', 'inhalant-frequency',
+           'pain-releiver-use', 'pain-releiver-frequency', 'oxycontin-use',
+           'oxycontin-frequency', 'tranquilizer-use', 'tranquilizer-frequency',
+           'stimulant-use', 'stimulant-frequency', 'meth-use', 'meth-frequency',
+           'sedative-use', 'sedative-frequency'],
           dtype='object')
 
 
 
-#### We replace the '-' in the columns of the drug dataframe as it would be perceived as the subtraction arithmetic operation when we cast a method. Therefore, it would be replace with a '_'. From the columns names above, we can observe that 'pain-releiver' and 'oxycontin' is spelled wrongly. 
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+We replace the '-' in the columns of the drug dataframe as it would be perceived as the subtraction arithmetic operation when we cast a method. Therefore, it would be replace with a '_'. From the columns names above, we can observe that 'pain-releiver' and 'oxycontin' is spelled wrongly. 
 
 
 ```python
@@ -2505,17 +2248,17 @@ drug.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -2673,7 +2416,10 @@ drug.head()
 
 
 
-#### We add a new column at the front of the table to understand the age proportion within the study. This will help us understand the age distribution amongst the various types of drug use.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+We add a new column at the front of the table to understand the age proportion within the study. This will help us understand the age distribution amongst the various types of drug use.
 
 
 ```python
@@ -2687,17 +2433,17 @@ drug.head(2)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -2748,7 +2494,7 @@ drug.head(2)
       <td>0.2</td>
       <td>2.0</td>
       <td>0.0</td>
-      <td>-</td>
+      <td>0.0</td>
       <td>0.2</td>
       <td>13.0</td>
     </tr>
@@ -2783,7 +2529,11 @@ drug.head(2)
 
 
 
-#### We are going to make a new data set without the age column as some of the age groups and it would be easier to process the data in the other process.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+
+---
+We are going to make a new data set without the age column due to imbalance in age groups and it would be easier to process the data using other techniques.
 
 
 ```python
@@ -2795,17 +2545,17 @@ druggie.head(2)
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -2847,7 +2597,7 @@ druggie.head(2)
       <td>0.1</td>
       <td>5.0</td>
       <td>0.0</td>
-      <td>-</td>
+      <td>0.0</td>
       <td>...</td>
       <td>0.1</td>
       <td>24.5</td>
@@ -2856,7 +2606,7 @@ druggie.head(2)
       <td>0.2</td>
       <td>2.0</td>
       <td>0.0</td>
-      <td>-</td>
+      <td>0.0</td>
       <td>0.2</td>
       <td>13.0</td>
     </tr>
@@ -2892,6 +2642,7 @@ druggie.head(2)
 
 
 ### 7.2 Do a high-level, initial overview of the data
+---
 
 Get a feel for what this dataset is all about.
 
@@ -2903,7 +2654,10 @@ Some things to consider doing:
 - Derive new features from the ones available to help your analysis
 - Visualize everything!
 
-#### To understand the relationships between variables, we will visualise the data in the form of a heat map and boxplot. The box plot is use to identify the outliers whereas the heat map will point us to the more closely related variables. 
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+To understand the relationships between variables, we will visualise the data in the form of a heat map and boxplot. The box plot is use to identify the outliers whereas the heat map will point us to the more closely related variables. 
 
 #### Before doing so, we must separate the data points into two groups: 1) Drug use and 2) Drug Frequency
 
@@ -2944,10 +2698,13 @@ plt.show()
 ```
 
 
-![png](output_101_0.png)
+![png](images/eda13.png)
 
 
-#### The drug use boxplot tells us that there are no outliers. Alcohol and marijuana use is much more widely used than the other drugs.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+The drug use boxplot tells us that there are no outliers. Alcohol and marijuana use is much more widely used than the other drugs.
 
 
 ```python
@@ -2968,10 +2725,13 @@ plt.show()
 ```
 
 
-![png](output_103_0.png)
+![png](images/eda14.png)
 
 
-#### The drug frequency boxplot tells us that there are outliers in the hallucinogen, pain reliever, tranquilizer, stimulant and sedative category. Alcohol and marijuana frequency remains to be much more widely used than the other drugs.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+The drug frequency boxplot tells us that there are outliers in the hallucinogen, pain reliever, tranquilizer, stimulant and sedative category. Alcohol, heroin and marijuana frequency remains to be much more widely used than the other drugs.
 
 
 ```python
@@ -2991,21 +2751,25 @@ for item in ax.get_xticklabels():
 ```
 
 
-![png](output_105_0.png)
+![png](images/eda15.png)
 
 
-### Based on the EDA correlation heatmap, we see a strong positive correlation between ( above 0.95) within the usage of certain drugs:
-#### 1) Stimulant and marijuana use
-#### 2) Oxytocin and marijuana use
-#### 3) Hallucinogen and marijuana use
-#### 4) Pain-reliever and marijuana use
-#### 5) Oxytocin and pain-reliever use
-#### 6) Stimulant and pain-reliever use
-#### 7) Tranquilizer and pain-reliever use
-#### 8) Stimulant and oxytocin use
-#### 9) Tranquilizer and oxytocin use
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+Based on the EDA correlation heatmap, we see a strong positive correlation between ( above 0.95) within the usage of certain drugs:
+1. Stimulant and marijuana use
+2. Oxytocin and marijuana use
+3. Hallucinogen and marijuana use
+4. Pain-reliever and marijuana use
+5. Oxytocin and pain-reliever use
+6. Stimulant and pain-reliever use
+7. Tranquilizer and pain-reliever use
+8. Stimulant and oxytocin use
+9. Tranquilizer and oxytocin use
 
 ### 7.3 Create a testable hypothesis about this data
+---
 
 Requirements for the question:
 
@@ -3027,13 +2791,18 @@ You should be only doing EDA _relevant to your question_ here. It is easy to go 
 
 Some of you may want to jump ahead to "modeling" data to answer your question. This is a topic addressed in the next project and **you should not do this for this project.** We specifically want you to not do modeling to emphasize the importance of performing EDA _before_ you jump to statistical analysis.
 
-** Question **
-Is there a difference between the mean percentage of oxytocin and pain-reliever use. 
-** Deliverables **
-1) Mean percentage of oxytocin use
-2) Mean percentage of pain-reliever use
-3) t-statistic
-4) p-value
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
+### Question:
+---
+Is there a difference between the mean percentage of oxytocin and pain-reliever use? 
+
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
+### Deliverables:
+---
+1. Mean percentage of oxytocin use
+2. Mean percentage of pain-reliever use
+3. t-statistic
+4. p-value
 
 <a id='null-hypothesis'></a>
 
@@ -3160,16 +2929,15 @@ import scipy.stats as stats
 results  = stats.ttest_ind(distri_1, distri_2, equal_var=False)
 
 if results.pvalue < (alpha/2):
-    print 'As p-value={results.pvalue} is less than {alpha/2}, we reject the null hypothesis and conclude that the mean difference between oxycontin and pain-reliever is not 0'
+    print('As p-value={results.pvalue} is less than {alpha/2}, we reject the null hypothesis and conclude that the mean difference between oxycontin and pain-reliever is not 0')
 else: 
-    print 'As p-value={results.pvalue} is less than {alpha/2}, we do not reject the null hypothesis'
+    print('As p-value={results.pvalue} is less than {alpha/2}, we do not reject the null hypothesis')
 ```
 
     As p-value={results.pvalue} is less than {alpha/2}, we do not reject the null hypothesis
 
 
-<img src="http://imgur.com/xDpSobf.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
-
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 ## 8. Introduction to dealing with outliers
 
 ---
@@ -3182,13 +2950,14 @@ Outliers are an interesting problem in statistics, in that there is not an agree
 4. Remove the outliers from the dataset.
 5. Compare the mean, median, and standard deviation of the "cleaned" data without outliers to the original. What is different about them and why?
 
-### 8.1.1 and 8.1.2
-#### An outliers is a data point which is numerically distant from the majority of the data point.
+### 8.1.1 and 8.1.2 Identify an outlier
+---
+An outliers is a data point which is numerically distant from the majority of the data point.
 
 
 
 ```python
-sat['Rate']
+sats['Rate']
 ```
 
 
@@ -3245,17 +3014,13 @@ sat['Rate']
     48     4
     49     4
     50     4
-    51    45
     Name: Rate, dtype: int64
 
 
 
 
 ```python
-rate.describe()
-
-
-
+sats['Rate'].describe()
 ```
 
 
@@ -3273,15 +3038,18 @@ rate.describe()
 
 
 
-##### Since the maximum value is no more than two standard deviation away from the mean, we are able to conclude that there are no outliers. It is not necessary to remove any data point.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
-<img src="http://imgur.com/GCAf1UX.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px">
+---
+Since the maximum value is no more than two standard deviation away from the mean, we are able to conclude that there are no outliers. It is not necessary to remove any data point.
 
+<a href="https://imgur.com/oUz4xal"><img src="https://i.imgur.com/oUz4xal.png" style="float: left; margin: 25px 15px 0px 0px; height: 25px" title="source: imgur.com" /></a>
 ### 9. Percentile scoring and spearman rank correlation
 
 ---
 
 ### 9.1 Calculate the spearman correlation of sat `Verbal` and `Math`
+---
 
 1. How does the spearman correlation compare to the pearson correlation? 
 2. Describe clearly in words the process of calculating the spearman rank correlation.
@@ -3296,7 +3064,7 @@ stats.pearsonr(sat['Verbal'], sat['Math'])
 
 
 
-    (0.899870852544429, 1.1920026733067679e-19)
+    (0.899870852544429, 1.192002673306768e-19)
 
 
 
@@ -3309,17 +3077,17 @@ verbal_math.corr()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -3347,10 +3115,14 @@ verbal_math.corr()
 
 
 
-#### The similarity between pearson and spearman correlation coefficient are that they are both range between -1 to 1. However pearson correlation coefficient tells us the how closely related the two variables. While the spearman correlation coefficient is based on the rank order of the variable and it's measure quantity.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+---
+ The similarity between pearson and spearman correlation coefficient are that they are both range between -1 to 1. However pearson correlation coefficient tells us the how closely related the two variables. While the spearman correlation coefficient is based on the rank order of the variable and it's measure quantity.
 
 
 ### 9.2 Percentile scoring
+---
 
 Look up percentile scoring of data. In other words, the conversion of numeric data to their equivalent percentile scores.
 
@@ -3372,17 +3144,17 @@ sat.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -3452,17 +3224,17 @@ sat[sat['State']== 'CA']
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
     .dataframe tbody tr th {
         vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
     }
 </style>
 <table border="1" class="dataframe">
@@ -3492,16 +3264,18 @@ sat[sat['State']== 'CA']
 
 
 ### 9.3 Percentiles and outliers
-
+---
 1. Why might percentile scoring be useful for dealing with outliers?
 2. Plot the distribution of a variable of your choice from the drug use dataset.
 3. Plot the same variable but percentile scored.
 4. Describe the effect, visually, of coverting raw scores to percentile.
 
-### 9.3.1
+### 9.3.1 Why might percentile scoring be useful for dealing with outliers?
+---
 #### It would be able to point where the outlier is on the percentile range
 
-### 9.3.2
+### 9.3.2 Plot the distribution of a variable of your choice from the drug use dataset
+---
 
 
 ```python
@@ -3512,18 +3286,16 @@ ax.set_xlabel('Frequency of Simulant')
 
 
 
-    Text(0.5,0,u'Frequency of Simulant')
+    Text(0.5,0,'Frequency of Simulant')
 
 
 
 
-![png](output_134_1.png)
+![png](images/eda16.png)
 
 
-
-```python
-### 9.3.3
-```
+### 9.3.3 Plot the same variable but percentile scored
+---
 
 
 ```python
@@ -3538,12 +3310,16 @@ ax.set_ylabel('Frequency')
 
 
 
-    Text(0,0.5,u'Frequency')
+    Text(0,0.5,'Frequency')
 
 
 
 
-![png](output_136_1.png)
+![png](images/eda17.png)
 
 
-#### We are able to clearly see where the outlier is with respect to majority of the data.
+<a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
+
+### 9.3.4 Describe the effect, visually, of coverting raw scores to percentile
+---
+From the histogram of the Stimulant use frequency, we can identify an outlier. The distribution of Stimulant use frequency does not follow a normal distribution as graph is not symmetrical. The mean percentile score of the Stimulant use frequency lies between 60-80%.
