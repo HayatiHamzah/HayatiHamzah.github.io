@@ -358,7 +358,104 @@ sat.head(10)
 ```
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table1/" height="200" width="900" overflow="auto"></iframe> 
+<div>
+  <style scoped>
+      .dataframe tbody tr th:only-of-type {
+          vertical-align: middle;
+      }
+
+      .dataframe tbody tr th {
+          vertical-align: top;
+      }
+
+      .dataframe thead th {
+          text-align: right;
+      }
+  </style>
+  <table border="1" class="dataframe">
+    <thead>
+      <tr style="text-align: right;">
+        <th></th>
+        <th>State</th>
+        <th>Rate</th>
+        <th>Verbal</th>
+        <th>Math</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>0</th>
+        <td>CT</td>
+        <td>82</td>
+        <td>509</td>
+        <td>510</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td>NJ</td>
+        <td>81</td>
+        <td>499</td>
+        <td>513</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>MA</td>
+        <td>79</td>
+        <td>511</td>
+        <td>515</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>NY</td>
+        <td>77</td>
+        <td>495</td>
+        <td>505</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>NH</td>
+        <td>72</td>
+        <td>520</td>
+        <td>516</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>RI</td>
+        <td>71</td>
+        <td>501</td>
+        <td>499</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>PA</td>
+        <td>71</td>
+        <td>500</td>
+        <td>499</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>VT</td>
+        <td>69</td>
+        <td>511</td>
+        <td>506</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>ME</td>
+        <td>69</td>
+        <td>506</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>VA</td>
+        <td>68</td>
+        <td>510</td>
+        <td>501</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ```python
 # We found that one of the rows identifies the scores of all the states. 
@@ -1836,7 +1933,7 @@ drug.head()
 
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table2/" height="200" width="900" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table2/" height="250" width="950" overflow="auto"></iframe> 
 
 
 
@@ -1978,7 +2075,7 @@ drug.head()
 ```
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table3/" height="200" width="900" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table3/" height="250" width="950" overflow="auto"></iframe> 
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -1995,7 +2092,7 @@ drug.head(2)
 ```
 
 
-<iframe src="https://hayatihamzah.github.io/project1/table4/" height="200" width="900" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table4/" height="250" width="950" overflow="auto"></iframe> 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
 
@@ -2009,7 +2106,7 @@ druggie = drug.drop(['age'], axis=1)
 druggie.head(2)
 ```
 
-<iframe src="https://hayatihamzah.github.io/project1/table5/" height="200" width="900" overflow="auto"></iframe> 
+<iframe src="https://hayatihamzah.github.io/project1/table5/" height="250" width="950" overflow="auto"></iframe> 
 
 ### 7.2 Do a high-level, initial overview of the data
 ---
