@@ -2,7 +2,7 @@
 layout: post
 title:  "Exploratory Data Analysis"
 date:   2017-11-30
-excerpt: "Basic exploration of data is the bread and butter of any data scientist"
+excerpt: "This project is focused on exploratory data analysis, aka “EDA” of SAT and drugs dataset from the States. EDA is an essential part of the data science analysis pipeline."
 image: "/images/eda2.jpg"
 permalink: /Project 1/
 
