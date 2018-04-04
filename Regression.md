@@ -3282,10 +3282,7 @@ sns.clustermap(house_new.corr(), cmap='seismic', center=0)
 
     <matplotlib.figure.Figure at 0x111d4cb00>
 
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg7.png)
-
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg7."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg7.png" style=" width:100%" /></a>
 
 
 ```python
@@ -3367,12 +3364,7 @@ sns.lmplot(x= 'true', y='predict', data=residual_plot)
 
     <seaborn.axisgrid.FacetGrid at 0x1172672b0>
 
-
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg1.png)
-
-
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg1"><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg1.png" style=" width:100%" /></a>
 
 ```python
 residual_plot.head()
@@ -3446,10 +3438,7 @@ sns.residplot(x= 'predict', y='true', data=residual_plot)
 
     <matplotlib.axes._subplots.AxesSubplot at 0x1a1e748898>
 
-
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2.png)
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2.png" style=" width:100%" /></a>
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -3516,9 +3505,7 @@ sns.residplot(x='predict', y='true', data=residual_plot)
     <matplotlib.axes._subplots.AxesSubplot at 0x1a1e71c048>
 
 
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg3.png)
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg3."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg3.png" style=" width:100%" /></a>
 
 
 #### 1.14 Identify top features of the housing dataset
@@ -3537,10 +3524,7 @@ lasso_coefs.sort_values('Coef', ascending=True).plot(x='Variables',y='Coef',figs
     <matplotlib.axes._subplots.AxesSubplot at 0x1a1eceec50>
 
 
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg4.png)
-
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg4."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg4.png" style=" width:100%" /></a>
 
 
 ```python
@@ -3961,10 +3945,7 @@ sns.clustermap(house.corr(), cmap='seismic', center=0)
 
     <matplotlib.figure.Figure at 0x111cb8048>
 
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg5.png)
-
+<a href="hhttps://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg5."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg5.png" style=" width:100%" /></a>
 
 
 ```python
@@ -4259,10 +4240,7 @@ sns.residplot(x='predict', y='true', data=residual_plot)
 
     <matplotlib.axes._subplots.AxesSubplot at 0x1117e2d30>
 
-
-
-
-![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg6.png)
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg6."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg6.png" style=" width:100%" /></a>
 
 
 
