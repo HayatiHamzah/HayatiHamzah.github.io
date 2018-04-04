@@ -3284,7 +3284,7 @@ sns.clustermap(house_new.corr(), cmap='seismic', center=0)
 
 
 
-![png](reg7.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg7.png)
 
 
 
@@ -3370,7 +3370,7 @@ sns.lmplot(x= 'true', y='predict', data=residual_plot)
 
 
 
-![png](reg1.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg1.png)
 
 
 
@@ -3449,7 +3449,7 @@ sns.residplot(x= 'predict', y='true', data=residual_plot)
 
 
 
-![png](reg2.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2.png)
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
@@ -3518,7 +3518,7 @@ sns.residplot(x='predict', y='true', data=residual_plot)
 
 
 
-![png](reg3.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg3.png)
 
 
 #### 1.14 Identify top features of the housing dataset
@@ -3539,7 +3539,7 @@ lasso_coefs.sort_values('Coef', ascending=True).plot(x='Variables',y='Coef',figs
 
 
 
-![png](reg4.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg4.png)
 
 
 
@@ -3963,7 +3963,7 @@ sns.clustermap(house.corr(), cmap='seismic', center=0)
 
 
 
-![png](reg5.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg5.png)
 
 
 
@@ -4262,7 +4262,7 @@ sns.residplot(x='predict', y='true', data=residual_plot)
 
 
 
-![png](reg6.png)
+![png](https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg6.png)
 
 
 
