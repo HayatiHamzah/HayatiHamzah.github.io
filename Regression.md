@@ -826,12 +826,9 @@ plt.figure(figsize=(14,5))
 sns.residplot(x= 'predict', y='true', data=residual_plot)
 ```
 
-
-
-
     <matplotlib.axes._subplots.AxesSubplot at 0x1a1e748898>
 
-<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2.png" style=" width:100%" /></a>
+<a href="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2."><img src="https://raw.githubusercontent.com/HayatiHamzah/hayatihamzah.github.io/master/images/reg2.png" style=" height: 500px width: 600px "/></a>
 
 
 <a href="https://imgur.com/aAMgLKD"><img src="https://i.imgur.com/aAMgLKD.png" style="float: left; margin: 20px; height: 100px" title="source: imgur.com" /></a>
